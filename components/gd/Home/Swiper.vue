@@ -56,11 +56,8 @@ onMounted(() => {
   <div class="home-glide">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides" style="min-height: 34.4271vw;">
-        <li class="glide__slide" v-for="(item, index) in glideList" :key="index" style="position: relative;">
-          <div style="width: 100%;height: 100%;position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;">
+        <li v-for="(item, index) in glideList" :key="index" class="glide__slide" style="position: relative;">
+          <div style="width: 100%;height: 100%;position: absolute;display: flex;align-items: center;justify-content: center;">
             <div class="container"
                  style="text-align: left; font-family: 'Roboto Mono', Monaco, Consolas, 'Courier New', monospace;"
                  :style="{ color: item.color }">
@@ -74,71 +71,22 @@ onMounted(() => {
           </div>
           <img :src="item.src" :alt="item.alt" />
         </li>
-        <!--<li class="glide__slide">-->
-        <!--  <div style="position: absolute;left:0;right: 0;margin: 0 auto;width: 100%;height: 100%;">-->
-        <!--    <div class="container"-->
-        <!--         style="color: #3e4041; text-align: left; font-family: 'Roboto Mono', Monaco, Consolas, 'Courier New', monospace;">-->
-        <!--      <h1 class="fadeInUpSmall animated">Turning <br> Big Ideas</h1>-->
-        <!--      <div style="display: inline-flex;flex-wrap: nowrap;align-items: center;">-->
-        <!--        <span class="fadeInRightSmall animated" style="background: #f5a63f;height: 6px;width: 69px;"></span>-->
-        <!--        <h4 class="fadeInRightSmall animated"-->
-        <!--            style="letter-spacing: 0.05em;font-size: 24px;font-weight: 500;margin: 0 10px;">into Great-->
-        <!--          Products</h4>-->
-        <!--      </div>-->
-        <!--    </div>-->
-        <!--  </div>-->
-        <!--  <img src="/gd/home/slider-1-slide-1-1920x749.jpg" alt="Image 1" />-->
-        <!--</li>-->
-        <!--<li class="glide__slide">
-          <div style="display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;position: absolute;margin: 0 auto;width: 100%;height: 100%;">
-            <div class="container"
-                 style="color: #fff; text-align: left; font-family: 'Roboto Mono', Monaco, Consolas, 'Courier New', monospace;">
-              <h1 class="fadeInUpSmall animated">Innovative <br> Technologies</h1>
-              <div style="display: inline-flex;flex-wrap: nowrap;align-items: center;">
-                <span class="fadeInRightSmall animated" style="background: #f5a63f;height: 6px;width: 69px;"></span>
-                <h4 class="fadeInRightSmall animated"
-                    style="letter-spacing: 0.05em;font-size: 24px;font-weight: 500;margin: 0 10px;">for Your
-                  Company</h4>
-              </div>
-            </div>
-          </div>
-          <img src="/gd/home/slider-1-slide-2-1920x749.jpg" alt="Image 2" />
-        </li>
-        <li class="glide__slide">
-          <div style="display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;position: absolute;margin: 0 auto;width: 100%;height: 100%;">
-            <div class="container"
-                 style="color: #fff; text-align: left; font-family: 'Roboto Mono', Monaco, Consolas, 'Courier New', monospace;">
-              <h1 class="fadeInUpSmall animated">Reliable <br> Solutions</h1>
-              <div style="display: inline-flex;flex-wrap: nowrap;align-items: center;">
-                <span class="fadeInRightSmall animated" style="background: #f5a63f;height: 6px;width: 69px;"></span>
-                <h4 class="fadeInRightSmall animated"
-                    style="letter-spacing: 0.05em;font-size: 24px;font-weight: 500;margin: 0 10px;">for Industrial
-                  Environment</h4>
-              </div>
-            </div>
-          </div>
-          <img src="/gd/home/slider-1-slide-3-1920x749.jpg" alt="Image 3" />
-        </li>-->
       </ul>
     </div>
 
     <div class="glide__arrows" data-glide-el="controls">
-      <i class="glide__arrow glide__arrow--left i-carbon-chevron-left hover-text-[#1B80E3] w-[32px] h-[32px] p-5"
-         data-glide-dir="<"/>
-      <div class="w-[1px] h-[50px] bg-[#ebebeb]"></div>
-      <i class="glide__arrow glide__arrow--right i-carbon-chevron-right hover-text-[#1B80E3] w-[32px] h-[32px] p-5"
-         data-glide-dir=">"/>
+      <div data-glide-dir="<" class="controls-btn">
+        <i class="glide__arrow glide__arrow--left i-carbon-chevron-left hover-text-[#1B80E3] w-[32px] h-[32px] p-5" />
+      </div>
+      <!-- <div class="w-[1px] h-[50px] bg-[#ebebeb]"></div> -->
+      <div data-glide-dir=">" class="controls-btn">
+        <i class="glide__arrow glide__arrow--right i-carbon-chevron-right hover-text-[#1B80E3] w-[32px] h-[32px] p-5" />
+      </div>
     </div>
 
     <!-- 底部切换控件 -->
     <div class="glide__bullets" data-glide-el="controls[nav]">
-      <button v-for="(item, index) in glideList" class="glide__bullet" :class="{ active: nowActive === index }" :data-glide-dir="`=${index}`" />
+      <button v-for="(item, index) in glideList" :key="index" class="glide__bullet" :class="{ active: nowActive === index }" :data-glide-dir="`=${index}`" />
     </div>
   </div>
 </template>
@@ -150,10 +98,7 @@ onMounted(() => {
 }
 
 .glide__slide {
-  /*position: absolute;*/
-  /*z-index: 70;*/
   text-align: center;
-  /*max-width: 60vw;*/
 }
 
 .glide__slide img {
@@ -163,16 +108,20 @@ onMounted(() => {
 
 .glide__arrows {
   position: absolute;
-  right: 0;
   z-index: 2;
-  bottom: 0;
-  background: #fff;
-
-  width: 235px;
-  height: 107px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  top: calc((100% - 72px) / 2);
+}
+.controls-btn {
+  padding: 1.5em 0.5em;
+  background: #00000045;
+}
+.controls-btn:hover {
+  padding: 1.5em 0.5em;
+  background: #f5a63f;
 }
 
 .glide__arrow {
@@ -335,5 +284,4 @@ h2,
     line-height: 1.16667;
   }
 }
-
 </style>

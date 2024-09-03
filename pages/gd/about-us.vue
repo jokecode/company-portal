@@ -9,6 +9,8 @@ definePageMeta({
     <Suspense>
       <ClientOnly>
         <GdCompanyProfile />
+        <GdAboutUsHonor />
+        <GdAboutUsSoftwareCopyright />
       </ClientOnly>
       <template #fallback>
         <div italic op50>
