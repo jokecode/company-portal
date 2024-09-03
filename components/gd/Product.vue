@@ -1,137 +1,67 @@
 <script setup lang="ts">
-const imgs = ref([
-  {
-    // 图片地址
-    url: '/gd/product/a1.jpg',
-    // 产品概述
-    // 技术参数
-  },
-  {
-    url: '/gd/product/a2.jpg',
-  },
-  {
-    url: '/gd/product/a3.jpg',
-  },
-  {
-    url: '/gd/product/a4.jpg',
-  },
-  {
-    url: '/gd/product/a5.jpg',
-  },
-  {
-    url: '/gd/product/a6.jpg',
-  },
-  {
-    url: '/gd/product/a7.jpg',
-  },
-  {
-    url: '/gd/product/DSC08113.jpg',
-  },
-  {
-    url: '/gd/product/DSC08114.jpg',
-  },
-  {
-    url: '/gd/product/DSC08115.jpg',
-  },
-  {
-    url: '/gd/product/DSC08116.jpg',
-  },
-  {
-    url: '/gd/product/DSC08117.jpg',
-  },
-  {
-    url: '/gd/product/DSC08118.jpg',
-  },
-])
+import { productData } from '~/config/product'
+import { useProductStore } from '~/composables/product'
+
+const product = useProductStore()
+const allProductData = ref(productData)
+const filterCriteria = ref('All')
+
+const disabled = ref(false)
+
+const filterProduct = computed(() => {
+  // 触发页面动画
+  warnDisabled()
+  return allProductData.value.filter((item) => {
+    return (item.type === filterCriteria.value || filterCriteria.value === 'All')
+  })
+})
+
+function showDetail(value) {
+  filterCriteria.value = value
+  product.setFilterCriteria(filterCriteria.value)
+}
+
+function warnDisabled() {
+  disabled.value = true
+  setTimeout(() => {
+    disabled.value = false
+  }, 1500)
+}
+
+function setCurrentProduct(info) {
+  product.setProductInfo(info)
+}
 </script>
 
 <template>
-  <div
-    style="
-    width: 70vw;
-    margin: 0 auto;"
-  >
-    <section id="company-activities" class="company-activities">
-      <h2 class="title1">
-        产品展示
-      </h2>
-      <p class="intro">
-        <!-- product display -->
-      </p>
-      <div class="activities">
-        <!-- <div class="activity">
-          <div class="act-image-wrapper">
-            <img src="/gd/product/1.png" alt="">
-          </div>
-          &lt;!&ndash; <div class="meta"> &ndash;&gt;
-          &lt;!&ndash;  <p class="data-published"> &ndash;&gt;
-          &lt;!&ndash;    <i class="far fa-calendar" /> &ndash;&gt;
-          &lt;!&ndash;    2020年4月22日 &ndash;&gt;
-          &lt;!&ndash;  </p> &ndash;&gt;
-          &lt;!&ndash;  <p class="comments"> &ndash;&gt;
-          &lt;!&ndash;    <i class="far fa-comments" /> &ndash;&gt;
-          &lt;!&ndash;    33 &ndash;&gt;
-          &lt;!&ndash;    <span>条评论</span> &ndash;&gt;
-          &lt;!&ndash;  </p> &ndash;&gt;
-          &lt;!&ndash; </div> &ndash;&gt;
-          &lt;!&ndash; <h2 class="act-title">提供互联网接入的ISP公司</h2> &ndash;&gt;
-          &lt;!&ndash; <article> &ndash;&gt;
-          &lt;!&ndash;  ISP证，全称为互联网接入服务业务(ISP)，是第二类增值电信业务。根据国务院相关规定，从事增值电信业务，就需要办理相应的增值电信业务许可证，增值电信业务经营许可证是按照国务院《中华人民共和国电信条例》，由工信部、各省市通信管理局对从事增值电信业务的企业颁发的从业证明，否则就是无证经营。被查需要负法律责任。 &ndash;&gt;
-          &lt;!&ndash; </article> &ndash;&gt;
-          &lt;!&ndash; <button class="read-more-btn">阅读更多</button> &ndash;&gt;
+  <div style="width: 70vw;margin: 0 auto;">
+    <section class="company-activities">
+      <h2 class="title1">产品中心</h2>
+      <section id="showcases" class="showcases section-bg">
+        <div class="filter-btns">
+          <button class="filter-btn" :class="filterCriteria === 'All' ? 'active' : ''" @click="showDetail('All')">
+            全部
+          </button>
+          <button class="filter-btn" :class="filterCriteria === 'Profinet' ? 'active' : ''" @click="showDetail('Profinet')">
+            PROFINET网关产品
+          </button>
+          <button class="filter-btn" :class="filterCriteria === 'DistributedIO' ? 'active' : ''" @click="showDetail('DistributedIO')">
+            分布式IO
+          </button>
+          <button class="filter-btn" :class="filterCriteria === 'PLC' ? 'active' : ''" @click="showDetail('PLC')">
+            PLC
+          </button>
+          <button class="filter-btn" :class="filterCriteria === 'ChipSoftware' ? 'active' : ''" @click="showDetail('ChipSoftware')">
+            PROFINET芯片/软件
+          </button>
+          <button class="filter-btn" :class="filterCriteria === 'Other' ? 'active' : ''" @click="showDetail('Other')">
+            其他
+          </button>
         </div>
-        <div class="activity">
-          <div class="act-image-wrapper">
-            <img src="/gd/product/2.jpg" alt="">
-          </div>
-          &lt;!&ndash; <div class="meta"> &ndash;&gt;
-          &lt;!&ndash;  <p class="data-published"> &ndash;&gt;
-          &lt;!&ndash;    <i class="far fa-calendar" /> &ndash;&gt;
-          &lt;!&ndash;    2020年4月22日 &ndash;&gt;
-          &lt;!&ndash;  </p> &ndash;&gt;
-          &lt;!&ndash;  <p class="comments"> &ndash;&gt;
-          &lt;!&ndash;    <i class="far fa-comments" /> &ndash;&gt;
-          &lt;!&ndash;    33 &ndash;&gt;
-          &lt;!&ndash;    <span>条评论</span> &ndash;&gt;
-          &lt;!&ndash;  </p> &ndash;&gt;
-          &lt;!&ndash; </div> &ndash;&gt;
-          &lt;!&ndash; <h2 class="act-title"> &ndash;&gt;
-          &lt;!&ndash;  提供互联网接入的ISP公司 &ndash;&gt;
-          &lt;!&ndash; </h2> &ndash;&gt;
-          &lt;!&ndash; <article> &ndash;&gt;
-          &lt;!&ndash;  ISP证，全称为互联网接入服务业务(ISP)，是第二类增值电信业务。根据国务院相关规定，从事增值电信业务，就需要办理相应的增值电信业务许可证，增值电信业务经营许可证是按照国务院《中华人民共和国电信条例》，由工信部、各省市通信管理局对从事增值电信业务的企业颁发的从业证明，否则就是无证经营。被查需要负法律责任。 &ndash;&gt;
-          &lt;!&ndash; </article> &ndash;&gt;
-          &lt;!&ndash; <button class="read-more-btn"> &ndash;&gt;
-          &lt;!&ndash;  阅读更多 &ndash;&gt;
-          &lt;!&ndash; </button> &ndash;&gt;
-        </div>
-        <div class="activity">
-          <div class="act-image-wrapper">
-            <img src="/gd/product/3.png" alt="">
-          </div>
-          &lt;!&ndash; <div class="meta"> &ndash;&gt;
-          &lt;!&ndash;  <p class="data-published"> &ndash;&gt;
-          &lt;!&ndash;    <i class="far fa-calendar" /> &ndash;&gt;
-          &lt;!&ndash;    2020年4月22日 &ndash;&gt;
-          &lt;!&ndash;  </p> &ndash;&gt;
-          &lt;!&ndash;  <p class="comments"> &ndash;&gt;
-          &lt;!&ndash;    <i class="far fa-comments" /> &ndash;&gt;
-          &lt;!&ndash;    33 &ndash;&gt;
-          &lt;!&ndash;    <span>条评论</span> &ndash;&gt;
-          &lt;!&ndash;  </p> &ndash;&gt;
-          &lt;!&ndash; </div> &ndash;&gt;
-          &lt;!&ndash; <h2 class="act-title"> &ndash;&gt;
-          &lt;!&ndash;  提供互联网接入的ISP公司 &ndash;&gt;
-          &lt;!&ndash; </h2> &ndash;&gt;
-          &lt;!&ndash; <article> &ndash;&gt;
-          &lt;!&ndash;  ISP证，全称为互联网接入服务业务(ISP)，是第二类增值电信业务。根据国务院相关规定，从事增值电信业务，就需要办理相应的增值电信业务许可证，增值电信业务经营许可证是按照国务院《中华人民共和国电信条例》，由工信部、各省市通信管理局对从事增值电信业务的企业颁发的从业证明，否则就是无证经营。被查需要负法律责任。 &ndash;&gt;
-          &lt;!&ndash; </article> &ndash;&gt;
-          &lt;!&ndash; <button class="read-more-btn"> &ndash;&gt;
-          &lt;!&ndash;  阅读更多 &ndash;&gt;
-          &lt;!&ndash; </button> &ndash;&gt;
-        </div> -->
-
-        <div v-for="(item, index) in imgs" :key="index" class="activity">
+      </section>
+      <p class="intro" />
+      <div class="activities" :class="{ shake: disabled }">
+        <div v-for="(item, index) in filterProduct" :key="index" class="activity">
           <div class="act-image-wrapper">
             <img :src="item.url" alt="">
           </div>
@@ -146,20 +76,23 @@ const imgs = ref([
             </p> -->
           </div>
           <h2 class="act-title">
-            RS485转PROFINET网关
+            {{ item.title }}
           </h2>
-          <article style="
+          <article
+            style="
             word-break: break-all;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;">
-            RS485转PROFINET网关型号是KJ-PNG-003，能够实现RS485接口仪表、变频器、综保、软启动器等设备接入到S71500、S71200、CPU315-2PN/DP、S7400等PROFINET网络系统，该网关为自由协议RS485转PROFINET网关，是串口PROFINET网关的一种。网关在PROFINET一侧是PROFINET IO 从站，在串口一侧物理接口RS485，支持基于RS485的自由协议通信。
-            RS485转PROFINET网关自由协议报文内容是通过主站S71500、S71200、CPU315-2PNDP、S7400等PLC的编程实现。基于时间的周期发送控制不需编程，可在主站配置（如博图、STEP7）中选择不同周期间隔的发送；基于事件的发送需要编程控制。通过编程可灵活控制四种收发模式（发收发收、发发、收发收发、收收）。
+            -webkit-box-orient: vertical;"
+          >
+            {{ item.desc }}
           </article>
           <button class="read-more-btn">
-            阅读更多
+            <nuxt-link to="/gd/product-details" @click="setCurrentProduct(item)">
+              产品详情
+            </nuxt-link>
           </button>
         </div>
       </div>
@@ -175,16 +108,18 @@ const imgs = ref([
   --primary-color: #ff434f;
   --text-color-darker: #2e2e2e;
   --text-color-dark-gray: #727272;
+  --secondary-color: #e3e3e3;
 }
 </style>
 
-<style scoped>
+<style lang="scss" scoped>
 section {
   /* 二维 */
   display: grid;
   /* 每个列的对齐方式 */
   justify-items: center;
-  max-width: 1280px;
+  /*max-width: 1280px;*/
+  max-width: 1344px;
   padding: 0 80px;
 }
 
@@ -196,7 +131,7 @@ section {
   content: '';
   display: block;
   position: absolute;
-  background-color: #f9fbfb;
+  /*background-color: #f9fbfb;*/
   width: 100vw;
   height: 100%;
   z-index: -1;
@@ -230,7 +165,7 @@ section {
 
 .activities {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 24px;
 }
 
@@ -271,6 +206,7 @@ section {
   color: var(--text-color-dark);
   font-size: 18px;
   margin-bottom: 16px;
+  height: 54px;
 }
 
 .activity article {
@@ -291,5 +227,56 @@ section {
 .activity:hover {
   transform: translateY(-20px) scale(1.05);
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btns {
+  margin-top: 54px;
+  margin-bottom: 38px;
+}
+
+.filter-btn {
+  margin: 0 7px;
+  background-color: var(--secondary-color);
+  border: 0;
+  color: var(--text-color-dark-gray);
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.filter-btn:focus,
+.filter-btn:active {
+  outline: none;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 </style>

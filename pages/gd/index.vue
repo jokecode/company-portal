@@ -7,18 +7,11 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="display: flex;
-    flex-direction: column;">
+  <div style="display: flex; flex-direction: column;">
     <Suspense>
       <ClientOnly>
         <GdHeader class="fixed left-0 right-0 top-0 z-[52]" />
-        <GdCarousel class="top-14" />
-        <GdCompanyProfile />
-        <br>
-        <GdProduct />
-        <br>
-        <GdCaseList />
-        <br>
+        <GdHome />
       </ClientOnly>
       <template #fallback>
         <div italic op50>

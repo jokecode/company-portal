@@ -8,7 +8,7 @@
     margin-top: -45px;">
     <div class="flex justify-between gap-8 w-full">
       <div style="padding: 50px 50px 40px;" class="flex-[4]">
-        <h2 class="color-[#280071] font-size-[38px] mb-[16px]">关于我们</h2>
+        <h2 class="color-[#1B80E3] font-size-[38px] mb-[16px]">关于我们</h2>
         <div class="line-height-[26px]">
           <p>成都工鼎科技公司创立于2016年，是业内领先的工业通信产品与解决方案提供商。2018年成为西门子PROFINET技术合作伙伴与产品代理商。2023年成为首批西门子边缘产品价值合作伙伴。</p>
           <br><br>

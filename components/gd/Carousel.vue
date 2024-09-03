@@ -82,7 +82,8 @@ onMounted(() => {
 
 <style>
 :root {
-  --primary-color: #ff434f;
+  /*--primary-color: #ff434f;*/
+  --primary-color: #1b80e3;
   --text-color-lightest: #e7e9ec;
   --backdrop-color: rgba(42, 42, 42, 0.7);
   /*--secondary-color: #e3e3e3;

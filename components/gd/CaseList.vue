@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const imgs = ref([
+const images = ref([
   {
     url: '/gd/case/case1.jpg',
     title: '基于西门子芯片与软件的PN解决方案',
@@ -49,15 +49,16 @@ const imgs = ref([
     width: 70vw;
     margin: 0 auto;"
   >
-    <section id="company-activities" class="company-activities">
+    <section class="company-activities">
       <h2 class="title1">
         案例展示
       </h2>
       <p class="intro">
         <!-- product display -->
       </p>
+
       <div class="activities">
-        <div v-for="(item, index) in imgs" :key="index" class="activity">
+        <div v-for="(item, index) in images" :key="index" class="activity">
           <div class="act-image-wrapper">
             <img :src="item.url" alt="">
           </div>
@@ -106,7 +107,8 @@ section {
   display: grid;
   /* 每个列的对齐方式 */
   justify-items: center;
-  max-width: 1280px;
+  /*max-width: 1280px;*/
+  max-width: 1344px;
   padding: 0 80px;
 }
 
@@ -152,8 +154,8 @@ section {
 
 .activities {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 45px;
 }
 
 .activity {
@@ -166,12 +168,12 @@ section {
 .act-image-wrapper {
   /*height: 255px;*/
   overflow: hidden;
-  margin: -24px;
+  /*margin: -24px;*/
   margin-bottom: 0;
 }
 
 .act-image-wrapper img {
-  min-height: 300px;
+  /*min-height: 230px;*/
   object-fit: cover;
   height: 100%;
   margin: 0 auto;
