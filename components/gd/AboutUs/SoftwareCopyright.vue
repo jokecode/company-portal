@@ -53,7 +53,7 @@ const images = ref([
           专利/软著
         </h2>
         <div class="grid-imgs">
-          <img v-for="(item, index) in images" :src="item.url" :key="index" class="img" alt="">
+          <img v-for="(item, index) in images" :key="index" :src="item.url" class="img" alt="">
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@ const images = ref([
   display: grid;
   gap: 50px;
   grid-template-columns: repeat(3, calc((100% - 100px) / 3));
-  grid-template-rows: repeat(2, 1fr);
+  /*grid-template-rows: repeat(2, 1fr);*/
   /*grid-template-columns: calc((100% - 100px) / 3) calc((100% - 100px) / 3) calc((100% - 100px) / 3);*/
   /*grid-template-rows: calc(33.33% - 50px) calc(33.33% - 50px) calc(33.33% - 50px);*/
 }

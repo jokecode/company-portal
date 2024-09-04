@@ -42,20 +42,17 @@ function setCurrentProduct(info) {
           <button class="filter-btn" :class="filterCriteria === 'All' ? 'active' : ''" @click="showDetail('All')">
             全部
           </button>
-          <button class="filter-btn" :class="filterCriteria === 'Profinet' ? 'active' : ''" @click="showDetail('Profinet')">
-            PROFINET网关产品
+
+          <button class="filter-btn" :class="filterCriteria === 'StandardizedProduct' ? 'active' : ''" @click="showDetail('StandardizedProduct')">
+            标准化产品
           </button>
-          <button class="filter-btn" :class="filterCriteria === 'DistributedIO' ? 'active' : ''" @click="showDetail('DistributedIO')">
-            分布式IO
+
+          <button class="filter-btn" :class="filterCriteria === 'CustomizedProduct' ? 'active' : ''" @click="showDetail('CustomizedProduct')">
+            定制化产品
           </button>
-          <button class="filter-btn" :class="filterCriteria === 'PLC' ? 'active' : ''" @click="showDetail('PLC')">
-            PLC
-          </button>
-          <button class="filter-btn" :class="filterCriteria === 'ChipSoftware' ? 'active' : ''" @click="showDetail('ChipSoftware')">
-            PROFINET芯片/软件
-          </button>
-          <button class="filter-btn" :class="filterCriteria === 'Other' ? 'active' : ''" @click="showDetail('Other')">
-            其他
+
+          <button class="filter-btn" :class="filterCriteria === 'AgencyProduct' ? 'active' : ''" @click="showDetail('AgencyProduct')">
+            代理产品
           </button>
         </div>
       </section>
