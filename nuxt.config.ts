@@ -1,3 +1,4 @@
+import ElementPlus from 'unplugin-element-plus/vite'
 import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
@@ -23,7 +24,16 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
     '@glidejs/glide/dist/css/glide.core.min.css',
+    'element-plus/dist/index.css',
   ],
+  build: {
+    transpile: ['element-plus/es'],
+  },
+  vite: {
+    plugins: [
+      ElementPlus(),
+    ],
+  },
 
   colorMode: {
     classSuffix: '',
