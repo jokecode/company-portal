@@ -66,7 +66,7 @@ function goBack() {
             <!-- ---------------  Controls  ---------------- -->
             <div class="glide__arrows" data-glide-el="controls" style="position: absolute;top: 0;bottom: 0;align-items: center;width: 100%;">
               <div class="glide__arrow i-carbon-chevron-left" data-glide-dir="<" />
-              <div class="glide__arrow i-carbon-chevron-right" data-glide-dir="<" />
+              <div class="glide__arrow i-carbon-chevron-right" data-glide-dir=">" />
             </div>
           </div>
         </div>

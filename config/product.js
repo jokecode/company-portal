@@ -17,6 +17,8 @@ export const productData = [
       images: [
         '/gd/product/pn/DP-PN_01.jpg',
         '/gd/product/pn/DP-PN_02.jpg',
+        '/gd/product/pn/DP-PN_03.jpg',
+        '/gd/product/pn/DP-PN_04.jpg',
       ],
       desc: [
         {
@@ -73,6 +75,8 @@ export const productData = [
     detail: {
       images: [
         '/gd/product/pn/PN-Canopen_01.jpg',
+        '/gd/product/pn/PN-Canopen_02.jpg',
+        '/gd/product/pn/PN-Canopen_03.jpg',
       ],
       desc: [
         {
@@ -171,6 +175,8 @@ export const productData = [
     detail: {
       images: [
         '/gd/product/pn/PN-ECAT_01.jpg',
+        '/gd/product/pn/PN-ECAT_02.jpg',
+        '/gd/product/pn/PN-ECAT_03.jpg',
       ],
       desc: [
         {
@@ -245,6 +251,8 @@ export const productData = [
     detail: {
       images: [
         '/gd/product/pn/PN-EIP_01.jpg',
+        '/gd/product/pn/PN-EIP_02.jpg',
+        '/gd/product/pn/PN-EIP_03.jpg',
       ],
       desc: [
         {
@@ -303,6 +311,8 @@ export const productData = [
     detail: {
       images: [
         '/gd/product/pn/PN-Mtcp_01.jpg',
+        '/gd/product/pn/PN-Mtcp_02.jpg',
+        '/gd/product/pn/PN-Mtcp_03.jpg',
       ],
       desc: [
         {
@@ -330,6 +340,8 @@ export const productData = [
     detail: {
       images: [
         '/gd/product/pn/PN-RS232_01.jpg',
+        '/gd/product/pn/PN-RS232_02.jpg',
+        '/gd/product/pn/PN-RS232_03.jpg',
       ],
       desc: [
         {
@@ -397,6 +409,8 @@ export const productData = [
       images: [
         '/gd/product/pn/PN-RTU_01.jpg',
         '/gd/product/pn/PN-RTU_02.jpg',
+        '/gd/product/pn/PN-RTU_03.jpg',
+        '/gd/product/pn/PN-RTU_04.jpg',
       ],
       desc: [
         {
@@ -1071,6 +1085,37 @@ export const productData = [
           desc: '◆\t支持RT及IRT功能\n'
           + '◆\t集成双口交换机\n'
           + '◆\t循环时间可达250 µs\n',
+        },
+      ],
+    },
+  },
+
+  /***************/
+  /*   东方发电器  */
+  /***************/
+  {
+    url: '/gd/product/DEC_01.jpg',
+    title: '东方电气XXX板子',
+    desc: 'XXXXXXXXX',
+    type: 'Profinet',
+    detail: {
+      images: [
+        '/gd/product/DEC_01.jpg',
+        '/gd/product/DEC_02.jpg',
+        '/gd/product/DEC_03.jpg',
+      ],
+      desc: [
+        {
+          title: '\n\n产品功能\n\n',
+          desc: 'XXXXXXXXX',
+        },
+        {
+          title: '\n\n产品特点\n\n',
+          desc: 'XXXXXXXXX',
+        },
+        {
+          title: '\n\n技术指标\n\n',
+          desc: 'XXXXXXXXX',
         },
       ],
     },

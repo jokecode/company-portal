@@ -2,34 +2,124 @@
 import Glide from '@glidejs/glide'
 
 const glideList = ref([
+  // {
+  //   src: '/gd/home/brand-1-156x45_inverse.png',
+  //   w: '156',
+  //   h: '45',
+  //   href: '#',
+  // },
+  // {
+  //   src: '/gd/home/brand-2-126x69_inverse.png',
+  //   w: '126',
+  //   h: '69',
+  //   href: '#',
+  // },
+  // {
+  //   src: '/gd/home/brand-3-150x36_inverse.png',
+  //   w: '150',
+  //   h: '36',
+  //   href: '#',
+  // },
+  // {
+  //   src: '/gd/home/brand-4-130x45_inverse.png',
+  //   w: '130',
+  //   h: '45',
+  //   href: '#',
+  // },
+  // {
+  //   src: '/gd/home/brand-4-130x45_inverse.png',
+  //   w: '130',
+  //   h: '45',
+  //   href: '#',
+  // },
+  // ======================
   {
-    src: '/gd/home/brand-1-156x45_inverse.png',
-    w: '156',
-    h: '45',
+    src: '/gd/partner-logo/西门子.png',
+    w: 768,
+    h: 256,
     href: '#',
   },
   {
-    src: '/gd/home/brand-2-126x69_inverse.png',
-    w: '126',
-    h: '69',
+    src: '/gd/partner-logo/施耐德电气.png',
+    w: 256,
+    h: 256,
     href: '#',
+    scale: 0.7,
+  },
+  // {
+  //   src: '/gd/partner-logo/北方华创.png',
+  //   w: '133',
+  //   h: '51',
+  //   href: '#',
+  //   scale: 1.3,
+  // },
+  // {
+  //   src: '/gd/partner-logo/北方华创-2.png',
+  //   w: '133',
+  //   h: '51',
+  //   href: '#',
+  //   scale: 1.3,
+  // },
+  {
+    src: '/gd/partner-logo/北方华创-6.png',
+    w: '133',
+    h: '51',
+    href: '#',
+    scale: 1.3,
   },
   {
-    src: '/gd/home/brand-3-150x36_inverse.png',
-    w: '150',
-    h: '36',
+    src: '/gd/partner-logo/东方电气.png',
+    w: '256',
+    h: '256',
     href: '#',
+    scale: 0.45,
+  },
+  // {
+  //   src: '/gd/partner-logo/兰州理工大学.jpg',
+  //   w: '820',
+  //   h: '228',
+  //   href: '#',
+  //   scale: 1.1,
+  // },
+  {
+    src: '/gd/partner-logo/兰州理工大学-2.png',
+    w: '1794',
+    h: '468',
+    href: '#',
+    scale: 1,
+  },
+  // {
+  //   src: '/gd/partner-logo/时代集团.jpg',
+  //   w: '276',
+  //   h: '105',
+  //   href: '#',
+  //   scale: 0.9,
+  // },
+  {
+    src: '/gd/partner-logo/时代集团-white.png',
+    w: '276',
+    h: '105',
+    href: '#',
+    scale: 0.8,
+  },
+  // {
+  //   src: '/gd/partner-logo/国家电网.png',
+  //   w: '455',
+  //   h: '256',
+  //   href: '#',
+  //   scale: 0.6,
+  // },
+  {
+    src: '/gd/partner-logo/国家电网-white.png',
+    w: '771',
+    h: '256',
+    href: '#',
+    scale: 0.8,
   },
   {
-    src: '/gd/home/brand-4-130x45_inverse.png',
-    w: '130',
-    h: '45',
-    href: '#',
-  },
-  {
-    src: '/gd/home/brand-4-130x45_inverse.png',
-    w: '130',
-    h: '45',
+    src: '/gd/partner-logo/紫金山实验室.svg',
+    w: '256',
+    h: '256',
     href: '#',
   },
 ])
@@ -40,7 +130,7 @@ const glide = new Glide('#owl-carousel', {
   perView: 4,
   focusAt: 'center',
   gap: 20,
-  autoplay: 2000,
+  autoplay: 3000,
   hoverpause: true,
   bound: false,
   breakpoints: {
@@ -66,7 +156,8 @@ onMounted(() => {
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           <li v-for="(item, index) in glideList" :key="index" class="glide__slide">
-            <img :src="item.src" alt="" style="border-radius: 0.4em;" :width="item.w" :height="item.h" />
+            <!-- style="border-radius: 0.4em;" -->
+            <img :src="item.src" :width="item.w" :height="item.h" alt="" :style="{ transform: `scale(${item.scale || 1})` }" />
           </li>
         </ul>
       </div>
@@ -75,7 +166,7 @@ onMounted(() => {
         <div class="control-btn" data-glide-dir="<">
           <div class="glide__arrow i-carbon-chevron-left" />
         </div>
-        <div class="control-btn" data-glide-dir="<">
+        <div class="control-btn" data-glide-dir=">">
           <div class="glide__arrow i-carbon-chevron-right" />
         </div>
       </div>
@@ -118,14 +209,18 @@ onMounted(() => {
   margin-top: 0;
   margin-bottom: 0;
   align-items: center;
+  justify-content: center;
 }
 .glide .glide__slide {
-  flex: none;
   border-radius: 0.4em;
+  /*flex: none;
   color: #263238;
   text-align: center;
-  list-style-type: none;
+  list-style-type: none;*/
   height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .glide__arrows {
   display: flex;
