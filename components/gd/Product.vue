@@ -86,11 +86,11 @@ function setCurrentProduct(info) {
           >
             {{ item.desc }}
           </article>
-          <button class="read-more-btn">
-            <nuxt-link to="/gd/product-details" @click="setCurrentProduct(item)">
+          <nuxt-link to="/gd/product-details">
+            <button class="read-more-btn" @click="setCurrentProduct(item)">
               产品详情
-            </nuxt-link>
-          </button>
+            </button>
+          </nuxt-link>
         </div>
       </div>
     </section>
