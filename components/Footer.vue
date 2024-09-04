@@ -1,5 +1,15 @@
+<script setup>
+import { ElBacktop } from 'element-plus'
+
+</script>
 <template>
   <footer>
+    <el-backtop target="#__nuxt" :right="100" :bottom="100" class="back-top" style="padding: 8px;width: 80px;height: 40px;">
+      <div class="back-top-icon">
+        <img class="back-top-icon-1" src="/go-top.svg" alt="">
+        <img class="back-top-icon-2" src="/gush.svg" alt="">
+      </div>
+    </el-backtop>
     <div class="footer-menus">
       <div class="contact-us">
         <p class="menu-title">联系我们</p>
@@ -128,5 +138,28 @@ footer {
   position: fixed;
   bottom: 60px;
   right: 30px;
+}
+
+.back-top:active,
+.back-top:focus {
+}
+
+.back-top-icon:focus,
+.back-top-icon:active {
+  .back-top-icon-1 {
+    margin-top: 0;
+    transition: -0.4s;
+  }
+  .back-top-icon-2 {
+    display: unset;
+    margin-top: -15px;
+  }
+}
+.back-top-icon-1 {
+  margin-top: -46px;
+}
+.back-top-icon-2 {
+  display: none;
+  transform: scale(0.6);
 }
 </style>
