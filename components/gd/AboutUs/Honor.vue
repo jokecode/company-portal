@@ -1,5 +1,26 @@
 <script setup lang="ts">
-
+import { ElImage } from "element-plus";
+const images = ref([
+  {
+    src: '/gd/honor/HighTechnologyEnterprises.png',
+    style: {
+      'grid-column-start': 1,
+      'grid-column-end': 3,
+    },
+  },
+  {
+    src: '/gd/honor/CCI08292024_0002_wm.jpg',
+    style: {},
+  },
+  {
+    src: '/gd/honor/20240829171247.jpg',
+    style: {},
+  },
+  {
+    src: '/gd/honor/CCI08292024_0003_wm.jpg',
+    style: {},
+  },
+])
 </script>
 
 <template>
@@ -9,11 +30,21 @@
         <h2 class="mb-[46px] font-size-[38px] color-[#1B80E3]">
           资质荣誉
         </h2>
-        <div class="grid-imgs">
-          <img class="img" src="/gd/honor/HighTechnologyEnterprises.png" alt="" style="grid-column-start: 1;grid-column-end:3;">
-          <img class="img" src="/gd/honor/CCI08292024_0002_wm.jpg" alt="">
-          <img class="img" src="/gd/honor/20240829171247.jpg" alt="">
-          <img class="img" src="/gd/honor/CCI08292024_0003_wm.jpg" alt="">
+        <div class="grid-images">
+          <el-image
+              v-for="(item, index) in images"
+              :key="index"
+              class="img"
+              :style="item.style"
+              :src="item.src"
+              :zoom-rate="1.2"
+              :max-scale="7"
+              :min-scale="0.2"
+              :preview-src-list="images.map((ele) => ele.src)"
+              :initial-index="index"
+              fit="cover"
+              :preview-teleported="true"
+          />
         </div>
       </div>
     </div>
@@ -21,7 +52,7 @@
 </template>
 
 <style scoped>
-.grid-imgs {
+.grid-images {
   display: grid;
   gap: 50px;
   /*grid-template-columns: calc(((100% - 100px) / 3) * 2) calc((100% - 100px) / 3) calc((100% - 100px) / 3);*/

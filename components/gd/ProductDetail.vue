@@ -1,21 +1,23 @@
-<script setup lang="ts">
+<script setup>
 import Glide from '@glidejs/glide'
 import { useProductStore } from '~/composables/product'
+import { ElImage, ElPageHeader } from 'element-plus'
 
 const product = useProductStore()
 
 const glide = new Glide('#Product-Img', {
   type: 'slider',
   startAt: 0,
-  perView: 4,
+  perView: 3,
   focusAt: 'center',
   gap: 20,
+  // autoplay: false,
   autoplay: 3000,
   hoverpause: true,
   bound: false,
   breakpoints: {
     800: {
-      perView: 4,
+      perView: 3,
     },
     480: {
       perView: 1,
@@ -31,6 +33,9 @@ function goBack() {
   const router = useRouter()
   router.back()
 }
+function openImageTab(item) {
+  window.open(`${item}`, '_blank')
+}
 </script>
 
 <template>
@@ -42,9 +47,15 @@ function goBack() {
     </section>
     <div style="border: 1px solid #f5f7fa;padding-bottom: 40px;">
       <div style="background-color: #F5F7FA;font-weight: bold;font-size: 20px;padding: 8px 12px;color: #1B80E3;display: flex;justify-content: space-between;align-items: center;">
-        <div>产品详情</div>
+        <div>
+          <el-page-header title="返 回" @back="goBack">
+            <template #content>
+              <span class="text-large font-600 mr-3"> 产品详情 </span>
+            </template>
+          </el-page-header>
+        </div>
         <div style="font-size: 14px;">
-          <span class="hover-cursor-pointer hover-underline hover-underline-offset-3" @click="goBack()">产品中心</span>
+          <span class="hover-cursor-pointer hover-underline hover-underline-offset-3" @click="goBack">产品中心</span>
           <span> / </span>
           <span class="">产品详情</span>
         </div>
@@ -59,14 +70,26 @@ function goBack() {
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
                 <li v-for="(item, index) in product.productInfo.detail.images" :key="index" class="glide__slide">
-                  <img :src="item" alt="" style="border-radius: 0.4em;">
+                  <img :src="item" alt="" style="border-radius: 0.4em;" @click="openImageTab(item)" class="cursor-pointer">
+                  <!--<el-image
+                      :key="index"
+                      :src="item"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :preview-src-list="product.productInfo.detail.images"
+                      :initial-index="index"
+                      fit="cover"
+                      :preview-teleported="true"
+                      style="border-radius: 0.4em;aspect-ratio: 4/5;"
+                  />-->
                 </li>
               </ul>
             </div>
             <!-- ---------------  Controls  ---------------- -->
             <div class="glide__arrows" data-glide-el="controls" style="position: absolute;top: 0;bottom: 0;align-items: center;width: 100%;">
-              <div class="glide__arrow i-carbon-chevron-left" data-glide-dir="<" />
-              <div class="glide__arrow i-carbon-chevron-right" data-glide-dir=">" />
+              <div data-glide-dir="<" class="controls-btn"><i class="glide__arrow i-carbon-chevron-left" /></div>
+              <div data-glide-dir=">" class="controls-btn"><i class="glide__arrow i-carbon-chevron-right" /></div>
             </div>
           </div>
         </div>
@@ -113,7 +136,9 @@ function goBack() {
   margin-top: 14px;
   transform: translateX(10%);
 }
-
+.glide__track {
+  margin: 12px 50px;
+}
 .glide {
   /*width: 600px;*/
   margin-left: auto;
@@ -122,26 +147,43 @@ function goBack() {
 }
 .glide .glide__slides {
   display: flex;
-  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
+  z-index: 5;
+  padding: 12px 0;
 }
 .glide .glide__slide {
   flex: none;
   border-radius: 0.4em;
   color: #263238;
-  background-color: #ccc;
+  /*background-color: #ccc;*/
+  background-color: transparent;
   text-align: center;
   line-height: 100px;
   list-style-type: none;
-  width: 300px !important;
+  /*width: 300px !important;*/
   height: 100% !important;
   box-shadow: 0.2em 0.2em 0.6em rgba(0, 0, 0, 0.4);
 }
 .glide__arrows {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: 1em 2px;
+  z-index: 3;
+}
+.controls-btn {
+  padding: 12px 4px;
+  background: #89878736;
+  border-radius: 0.4em;
+ }
+.controls-btn:hover,
+.controls-btn:focus {
+  background: #f5a63f;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.controls-btn:active {
+  transform: scale(0.88);
 }
 .glide__arrow {
   padding: 1em;
@@ -150,14 +192,5 @@ function goBack() {
   transition: 0.3s;
   border: 1px solid #1b80e3 !important;
   color: #1b80e3 !important;
-}
-.glide__arrow:hover {
-  color: red;
-}
-.glide__arrow:focus {
-  outline: none;
-}
-.glide__arrow:active {
-  transform: scale(0.88);
 }
 </style>

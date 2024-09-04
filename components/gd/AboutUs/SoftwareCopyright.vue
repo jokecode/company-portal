@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {ElImage} from "element-plus";
+
 const images = ref([
   {
     url: '/gd/software-copyright-wm/2024-09-03_1639.png',
@@ -53,7 +55,21 @@ const images = ref([
           专利/软著
         </h2>
         <div class="grid-imgs">
-          <img v-for="(item, index) in images" :key="index" :src="item.url" class="img" alt="">
+          <!-- <img v-for="(item, index) in images" :key="index" :src="item.url" class="img" alt=""> -->
+          <el-image
+              v-for="(item, index) in images"
+              :key="index"
+              class="img"
+              :style="item.style"
+              :src="item.url"
+              :zoom-rate="1.2"
+              :max-scale="7"
+              :min-scale="0.2"
+              :preview-src-list="images.map((ele) => ele.url)"
+              :initial-index="index"
+              fit="cover"
+              :preview-teleported="true"
+          />
         </div>
       </div>
     </div>

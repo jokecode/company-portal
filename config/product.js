@@ -261,10 +261,10 @@ export const productData = [
           + '\n'
           + '本网关连接到 PROFINET 总线中做为从站使用，连接到 ETHERNET/IP 总线中做为从站使用。',
         },
-        {
-          title: '\n\n产品特点\n\n',
-          desc: '',
-        },
+        // {
+        //   title: '\n\n产品特点\n\n',
+        //   desc: '',
+        // },
         {
           title: '\n\n技术指标\n\n',
           desc: 'PROFINET 技术参数\n'
@@ -288,7 +288,7 @@ export const productData = [
           + '\n'
           + '● 输入输出字节数：输入字节数为 490Bytes、输出字节数为 490 Bytes。'
           + '\n\n'
-          + '电气参数'
+          + '电气参数\n'
           + '\n'
           + '◆  电源：直流 24V/200mA（18V～30V 可用），使用中建议接好保护地 PE\n'
           + '\n'
