@@ -1,87 +1,192 @@
 <script setup lang="ts">
+import { ElImage, ElWatermark } from 'element-plus'
+
 const news = ref([
   {
-    date: '2020年4月22日',
-    title: '提供互联网接入的ISP公司',
-    picUrl: '/images/honor/CCI08292024_0002.jpg',
-    description: 'ISP证，全称为互联网接入服务业务(ISP)，是第二类增值电信业务。根据国务院相关规定，从事增值电信业务，就需要办理相应的增值电信业务许可证，增值电信业务经营许可证是按照国务院《中华人民共和国电信条例》，由工信部、各省市通信管理局对从事增值电信业务的企业颁发的从业证明，否则就是无证经营。被查需要负法律责任。',
+    date: '2024年8月18日',
+    year: '2024',
+    title: '工鼎科技 受邀参加西门子2024年第四届工业边缘生态大会',
+    picUrl: '/images/siemens-edge/2024/11.jpg',
+    picUrls: [
+      '/images/siemens-edge/2024/00.png',
+      '/images/siemens-edge/2024/11.jpg',
+      '/images/siemens-edge/2024/12.jpg',
+      '/images/siemens-edge/2024/13.jpg',
+      '/images/siemens-edge/2024/14.jpg',
+      '/images/siemens-edge/2024/15.jpg',
+      '/images/siemens-edge/2024/16.jpg',
+      '/images/siemens-edge/2024/17.jpg',
+      '/images/siemens-edge/2024/21.jpg',
+      '/images/siemens-edge/2024/22.jpg',
+      '/images/siemens-edge/2024/23.jpg',
+    ],
+    description: '工鼎科技 受邀参加西门子2024年第四届工业边缘生态大会\n当下，生成式 AI 正在加速新一轮产业变革，而西门子持续推动以人工智能、边缘计算、工业 5G 等前沿技术与产业场景的“双向奔赴”。为更好地以科技创新带动产业创新，第四届西门子工业边缘生态大会将于 2024 年 8 月 16 日，在深圳前海嘉里中心 T2 举办。当下，生成式 AI 正在加速新一轮产业变革，而西门子持续推动以人工智能、边缘计算、工业 5G 等前沿技术与产业场景的“双向奔赴”。为更好地以科技创新带动产业创新，第四届西门子工业边缘生态大会将于 2024 年 8 月 16 日，在深圳前海嘉里中心 T2 举办。',
   },
   {
-    date: '2020年4月22日',
-    title: '提供互联网接入的ISP公司',
-    picUrl: '/images/honor/CCI08292024_0003.jpg',
-    description: 'ISP证，全称为互联网接入服务业务(ISP)，是第二类增值电信业务。根据国务院相关规定，从事增值电信业务，就需要办理相应的增值电信业务许可证，增值电信业务经营许可证是按照国务院《中华人民共和国电信条例》，由工信部、各省市通信管理局对从事增值电信业务的企业颁发的从业证明，否则就是无证经营。被查需要负法律责任。',
-  },
-  {
-    date: '2020年4月22日',
-    title: '提供互联网接入的ISP公司',
-    picUrl: '/images/honor/CCI08292024_0002.jpg',
-    description: 'ISP证，全称为互联网接入服务业务(ISP)，是第二类增值电信业务。根据国务院相关规定，从事增值电信业务，就需要办理相应的增值电信业务许可证，增值电信业务经营许可证是按照国务院《中华人民共和国电信条例》，由工信部、各省市通信管理局对从事增值电信业务的企业颁发的从业证明，否则就是无证经营。被查需要负法律责任。',
-  },
-  {
-    date: '2020年4月22日',
-    title: '《2023年西门子边缘生态大会》',
-    picUrl: '/images/honor/CCI08292024_0002.jpg',
-    description: '',
-  },
-  {
-    date: '2020年4月22日',
-    title: '《2024年西门子边缘生态大会》',
-    picUrl: '/images/honor/CCI08292024_0002.jpg',
-    description: '',
-  },
-  {
-    date: '2020年4月22日',
-    title: '《2023年西门子嘉年华》',
-    picUrl: '/images/honor/CCI08292024_0002.jpg',
-    description: '',
-  },
-  {
-    date: '2020年4月22日',
-    title: '《2022年西门子杯》',
-    picUrl: '/images/honor/CCI08292024_0002.jpg',
-    description: '',
-  },
-  {
-    date: '2020年4月22日',
-    title: '《2023年西门子杯》',
-    picUrl: '/images/honor/CCI08292024_0002.jpg',
-    description: '',
-  },
-  {
-    date: '2020年4月22日',
+    date: '2024年8月16日',
+    year: '2024',
     title: '《2024年西门子杯》',
-    picUrl: '/images/honor/CCI08292024_0002.jpg',
-    description: '',
+    picUrl: '/images/siemenscup-cimc/2024/1.jpg',
+    picUrls: [
+      '/images/siemenscup-cimc/2024/1.jpg',
+      '/images/siemenscup-cimc/2024/2.jpg',
+      '/images/siemenscup-cimc/2024/3.jpg',
+      '/images/siemenscup-cimc/2024/4.jpg',
+      '/images/siemenscup-cimc/2024/5.jpg',
+      '/images/siemenscup-cimc/2024/6.jpg',
+      '/images/siemenscup-cimc/2024/7.jpg',
+      '/images/siemenscup-cimc/2024/8.jpg',
+    ],
+    description: '当下，生成式 AI 正在加速新一轮产业变革，而西门子持续推动以人工智能、边缘计算、工业 5G 等前沿技术与产业场景的“双向奔赴”。为更好地以科技创新带动产业创新，第四届西门子工业边缘生态大会将于 2024 年 8 月 16 日，在深圳前海嘉里中心 T2 举办。当下，生成式 AI 正在加速新一轮产业变革，而西门子持续推动以人工智能、边缘计算、工业 5G 等前沿技术与产业场景的“双向奔赴”。为更好地以科技创新带动产业创新，第四届西门子工业边缘生态大会将于 2024 年 8 月 16 日，在深圳前海嘉里中心 T2 举办。',
+  },
+  {
+    date: '2023年8月16日',
+    year: '2023',
+    title: '《2023年西门子杯》',
+    picUrl: '/images/siemenscup-cimc/2023/1.jpg',
+    picUrls: [
+      '/images/siemenscup-cimc/2023/1.jpg',
+      '/images/siemenscup-cimc/2023/2.jpg',
+      '/images/siemenscup-cimc/2023/3.jpg',
+      '/images/siemenscup-cimc/2023/4.jpg',
+      '/images/siemenscup-cimc/2023/5.jpg',
+      '/images/siemenscup-cimc/2023/6.jpg',
+      '/images/siemenscup-cimc/2023/7.jpg',
+      '/images/siemenscup-cimc/2023/8.jpg',
+      '/images/siemenscup-cimc/2023/9.jpg',
+    ],
+    description: 'XXXXXXXXXXXXXXXXXXXXXXXXXXX',
+  },
+  {
+    date: '2023年7月26日',
+    year: '2023',
+    title: '工鼎科技 亮相西门子2023年第三届工业边缘生态大会',
+    picUrl: '/images/siemens-edge/2023/00.jpg',
+    picUrls: [
+      '/images/siemens-edge/2023/0.jpg',
+      '/images/siemens-edge/2023/00.jpg',
+      '/images/siemens-edge/2023/1.jpg',
+      '/images/siemens-edge/2023/2.jpg',
+      '/images/siemens-edge/2023/3.jpg',
+      '/images/siemens-edge/2023/4.jpg',
+      '/images/siemens-edge/2023/10.jpg',
+      '/images/siemens-edge/2023/12.jpg',
+      '/images/siemens-edge/2023/13.jpg',
+      '/images/siemens-edge/2023/14.jpg',
+      '/images/siemens-edge/2023/15.jpg',
+      '/images/siemens-edge/2023/16.jpg',
+      '/images/siemens-edge/2023/17.jpg',
+      '/images/siemens-edge/2023/20.jpg',
+      '/images/siemens-edge/2023/21.jpg',
+      '/images/siemens-edge/2023/22.jpg',
+      '/images/siemens-edge/2023/23.jpg',
+      '/images/siemens-edge/2023/24.jpg',
+      '/images/siemens-edge/2023/25.jpg',
+    ],
+    description: '工鼎科技亮相西门子2023年第三届工业边缘生态大会',
+  },
+  {
+    date: '2023年7月21日',
+    year: '2023',
+    title: '《2023年西门子嘉年华》',
+    picUrl: '/images/siemens-tia/2023/2023-Siemens-TIA-festival1.jpg',
+    picUrls: [
+      '/images/siemens-tia/2023/2023-Siemens-TIA-festival1.jpg',
+      '/images/siemens-tia/2023/2023-Siemens-TIA-festival2.jpg',
+      '/images/siemens-tia/2023/2023-Siemens-TIA-festival3.jpg',
+      '/images/siemens-tia/2023/2023-Siemens-TIA-festival4.jpg',
+      '/images/siemens-tia/2023/2023-Siemens-TIA-festival5.jpg',
+      '/images/siemens-tia/2023/2023-Siemens-TIA-festival_11.jpg',
+      '/images/siemens-tia/2023/2023-Siemens-TIA-festival_13.jpg',
+    ],
+    description: '工鼎科技 受邀参加西门子2023年嘉年华',
+  },
+  {
+    date: '2022年8月16日',
+    year: '2022',
+    title: '《2022年西门子杯》',
+    picUrl: '/images/honor/CCI08292024_0002_wm.jpg',
+    picUrls: [
+      '/images/honor/CCI08292024_0002_wm.jpg'
+    ],
+    description: 'XXXXXXXXXXXXXXXXXXXXXXXXXXX',
   },
 ])
+
+const filterCriteria = ref('All')
+
+const font = reactive({
+  color: 'rgba(0, 0, 0, .15)',
+})
+
+const filterNews = computed(() => {
+  return news.value.filter((item) => {
+    return (item.year === filterCriteria.value || filterCriteria.value === 'All')
+  })
+})
+
+function showDetail(value) {
+  filterCriteria.value = value
+}
 </script>
 
 <template>
   <section id="company-activities" class="company-activities">
     <h2 class="title1">公司动态</h2>
-    <p class="intro">关注公司动态，获取一手信息</p>
+    <section id="showcases" class="showcases section-bg">
+      <div class="filter-btns">
+        <button class="filter-btn" :class="filterCriteria === 'All' ? 'active' : ''" @click="showDetail('All')">
+          全部
+        </button>
+        <button class="filter-btn" :class="filterCriteria === '2024' ? 'active' : ''" @click="showDetail('2024')">
+          2024年
+        </button>
+        <button class="filter-btn" :class="filterCriteria === '2023' ? 'active' : ''" @click="showDetail('2023')">
+          2023年
+        </button>
+        <button class="filter-btn" :class="filterCriteria === '2022' ? 'active' : ''" @click="showDetail('2022')">
+          2022年
+        </button>
+      </div>
+    </section>
+    <p class="intro" />
     <div class="activities">
-      <div v-for="(item, index) in news" :key="index" class="activity">
+      <div v-for="(item, index) in filterNews" :key="index" class="activity">
         <div class="act-image-wrapper">
-          <img :src="item.picUrl" alt="">
+          <!--<img :src="item.picUrl" alt="">-->
+          <el-watermark :font="font" content="工鼎科技">
+            <el-image
+              :src="item.picUrl"
+              :preview-teleported="true"
+              :zoom-rate="1.2"
+              :max-scale="7"
+              :min-scale="0.2"
+              :preview-src-list="item.picUrls"
+              :initial-index="item.picUrls.findIndex(ele => item.picUrl === ele)"
+              fit="cover"
+            />
+          </el-watermark>
         </div>
-        <div class="meta">
-          <p class="data-published">
-            <i class="far fa-calendar"></i>
-            {{ item.date }}
-          </p>
-          <p class="comments">
-            <!-- <i class="far fa-comments"></i>
-            33
-            <span>条评论</span> -->
-          </p>
+        <div class="act-content">
+          <div class="meta">
+            <div class="flex gap-2">
+              <div class="i-carbon-calendar-heat-map font-size-[18px]"></div>
+              <div>{{ item.date }}</div>
+            </div>
+            <p class="comments">
+              <!-- <i class="far fa-comments"></i>
+              33
+              <span>条评论</span> -->
+            </p>
+          </div>
+          <h2 class="act-title">{{ item.title }}</h2>
+          <article>
+            {{ item.description }}
+          </article>
+          <div style="text-align: right;width: 100%;">
+            <button class="read-more-btn">阅读更多</button>
+          </div>
         </div>
-        <h2 class="act-title">{{ item.title }}</h2>
-        <article>
-          {{ item.description }}
-        </article>
-        <button class="read-more-btn" @click="">阅读更多</button>
       </div>
     </div>
   </section>
@@ -94,7 +199,7 @@ const news = ref([
 }
 
 .intro {
-  margin: 28px 0 60px 0;
+  margin-bottom: 40px;
   /* text-indent: 2em; */
   font-size: 18px;
   color: var(--text-color-dark-gray);
@@ -112,42 +217,50 @@ const news = ref([
 }
 /* 公司动态 */
 .company-activities {
-  max-width: 1280px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
   display: grid;
   justify-items: center;
-  padding: 0 80px;
+  /*padding: 0 80px;*/
 }
 
 .activities {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 24px;
-  gap: 40px;
+  gap: 30px;
 }
 
 .activity {
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
-  padding: 24px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+  padding: 12px;
   transition: 0.4s;
+  display: flex;
+  gap: 30px;
 }
-
 .act-image-wrapper {
-  height: 255px;
-  overflow: hidden;
-  margin: -24px;
-  margin-bottom: 0;
+  flex: 2;
+  flex-shrink: 0;
 }
-
-.act-image-wrapper img {
-  min-height: 300px;
-  object-fit: cover;
+.act-content {
+  display: flex;
+  flex: 3;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+}
+.act-image-wrapper {
+  height: 274px;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .activity .meta {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   margin-bottom: 12px;
   color: var(--text-color-light-gray);
   font-size: 16px;
@@ -160,14 +273,24 @@ const news = ref([
 
 .act-title {
   color: var(--text-color-dark);
-  font-size: 18px;
   margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .activity article {
   color: var(--text-color-gray);
   letter-spacing: 0.54px;
   line-height: 24px;
+  /*text-indent: 2em;*/
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  /*padding: 0 20px 0 12px;*/
+  flex-basis: 120px;
 }
 
 .read-more-btn {
@@ -175,12 +298,41 @@ const news = ref([
   color: white;
   background-color: var(--primary-color);
   padding: 6px 14px;
-  margin-top: 24px;
+  margin-top: 12px;
   border-radius: 4px;
+  visibility: hidden;
+  display: none;
 }
 
 .activity:hover {
   transform: translateY(-20px) scale(1.05);
   box-shadow: 0 0 36px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btns {
+  margin-top: 54px;
+  margin-bottom: 38px;
+}
+
+.filter-btn {
+  margin: 0 7px;
+  background-color: var(--secondary-color);
+  border: 0;
+  color: var(--text-color-dark-gray);
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.filter-btn:focus,
+.filter-btn:active {
+  outline: none;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
 </style>
