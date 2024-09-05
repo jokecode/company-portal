@@ -101,8 +101,6 @@
   font-size: 24px;
   position: relative;
   vertical-align: top;
-  //font-size: 0;
-  //line-height: 0;
 }
 .box-counter-modern__wrap {
   top: 20px;
