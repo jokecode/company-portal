@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ElImage } from "element-plus";
+import { ElImage } from 'element-plus'
+
 const images = ref([
   {
     src: '/gd/honor/HighTechnologyEnterprises.png',
@@ -32,18 +33,18 @@ const images = ref([
         </h2>
         <div class="grid-images">
           <el-image
-              v-for="(item, index) in images"
-              :key="index"
-              class="img"
-              :style="item.style"
-              :src="item.src"
-              :zoom-rate="1.2"
-              :max-scale="7"
-              :min-scale="0.2"
-              :preview-src-list="images.map((ele) => ele.src)"
-              :initial-index="index"
-              fit="cover"
-              :preview-teleported="true"
+            v-for="(item, index) in images"
+            :key="index"
+            class="img"
+            :style="item.style"
+            :src="item.src"
+            :zoom-rate="1.2"
+            :max-scale="7"
+            :min-scale="0.2"
+            :preview-src-list="images.map((ele) => ele.src)"
+            :initial-index="index"
+            fit="cover"
+            :preview-teleported="true"
           />
         </div>
       </div>
@@ -56,18 +57,7 @@ const images = ref([
   display: grid;
   gap: 50px;
   /*grid-template-columns: calc(((100% - 100px) / 3) * 2) calc((100% - 100px) / 3) calc((100% - 100px) / 3);*/
-  /*grid-template-rows: calc(33.33% - 50px) calc(33.33% - 50px) calc(33.33% - 50px);*/
   grid-template-columns: repeat(3, calc((100% - 100px) / 3));
-  /*grid-template-columns: repeat(3, calc((100% - 100px) / 3));
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas:
-    'a a b'
-    'c d e';*/
-  /*grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px;
-  grid-template-areas: 'a a b'
-                       'a a c'
-                       'd e f';*/
 }
 .img {
   border-radius: 10px;

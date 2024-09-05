@@ -167,7 +167,7 @@
   border-radius: 0;
   color: #151515;
   background-color: #ebebeb;
-  border-color: #ebebeb;
+  /*border-color: #ebebeb;*/
   border: 0;
 }
 

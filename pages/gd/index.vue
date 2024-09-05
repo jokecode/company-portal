@@ -3,7 +3,6 @@ definePageMeta({
   layout: 'gd-layout',
 })
 
-// const online = useOnline()
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 <script setup>
 import Glide from '@glidejs/glide'
+import { ElPageHeader } from 'element-plus'
 import { useProductStore } from '~/composables/product'
-import { ElImage, ElPageHeader } from 'element-plus'
 
 const product = useProductStore()
 
@@ -71,7 +71,7 @@ function openImageTab(item) {
               <ul class="glide__slides">
                 <li v-for="(item, index) in product.productInfo.detail.images" :key="index" class="glide__slide">
                   <img :src="item" alt="" style="border-radius: 0.4em;" @click="openImageTab(item)" class="cursor-pointer">
-                  <!--<el-image
+                  <!-- <el-image
                       :key="index"
                       :src="item"
                       :zoom-rate="1.2"
@@ -82,7 +82,7 @@ function openImageTab(item) {
                       fit="cover"
                       :preview-teleported="true"
                       style="border-radius: 0.4em;aspect-ratio: 4/5;"
-                  />-->
+                  /> -->
                 </li>
               </ul>
             </div>
@@ -175,7 +175,7 @@ function openImageTab(item) {
   padding: 12px 4px;
   background: #89878736;
   border-radius: 0.4em;
- }
+}
 .controls-btn:hover,
 .controls-btn:focus {
   background: #f5a63f;

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Glide from '@glidejs/glide'
 import { onMounted } from 'vue'
 

@@ -1,15 +1,15 @@
 <script setup>
 import { ElBacktop } from 'element-plus'
-
 </script>
+
 <template>
   <footer>
-    <el-backtop target="#__nuxt" :right="100" :bottom="100" class="back-top" style="padding: 8px;width: 80px;height: 40px;">
+    <ElBacktop target="#__nuxt" :right="100" :bottom="100" class="back-top" style="padding: 8px;width: 80px;height: 40px;">
       <div class="back-top-icon">
         <img class="back-top-icon-1" src="/go-top.svg" alt="">
         <img class="back-top-icon-2" src="/gush.svg" alt="">
       </div>
-    </el-backtop>
+    </ElBacktop>
     <div class="footer-menus">
       <div class="contact-us">
         <p class="menu-title">联系我们</p>

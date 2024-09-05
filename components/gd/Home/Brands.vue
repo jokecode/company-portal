@@ -1,38 +1,7 @@
-<script setup lang="ts">
+<script setup>
 import Glide from '@glidejs/glide'
 
 const glideList = ref([
-  // {
-  //   src: '/gd/home/brand-1-156x45_inverse.png',
-  //   w: '156',
-  //   h: '45',
-  //   href: '#',
-  // },
-  // {
-  //   src: '/gd/home/brand-2-126x69_inverse.png',
-  //   w: '126',
-  //   h: '69',
-  //   href: '#',
-  // },
-  // {
-  //   src: '/gd/home/brand-3-150x36_inverse.png',
-  //   w: '150',
-  //   h: '36',
-  //   href: '#',
-  // },
-  // {
-  //   src: '/gd/home/brand-4-130x45_inverse.png',
-  //   w: '130',
-  //   h: '45',
-  //   href: '#',
-  // },
-  // {
-  //   src: '/gd/home/brand-4-130x45_inverse.png',
-  //   w: '130',
-  //   h: '45',
-  //   href: '#',
-  // },
-  // ======================
   {
     src: '/gd/partner-logo/西门子.png',
     w: 768,

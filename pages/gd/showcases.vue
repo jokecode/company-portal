@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="display: flex; flex-direction: column;">
+  <div class="flex flex-col">
     <Suspense>
       <ClientOnly>
         <GdCaseList />

@@ -3,8 +3,6 @@ import { onMounted } from 'vue'
 import Glide from '@glidejs/glide'
 import anime from 'animejs'
 
-// const captionsELRef = ref(null)
-
 const route = useRoute()
 
 const queryClassName = ref(`slide-caption${route.path.replaceAll('/', '_')}`)

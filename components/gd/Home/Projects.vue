@@ -151,5 +151,4 @@
 .thumb-janez .thumb-janez__content {
   transition: all 0.4s ease 0s;
 }
-
 </style>
