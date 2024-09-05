@@ -1,0 +1,26 @@
+# Base
+FROM node:lts-alpine as base
+
+# Deps
+FROM base AS deps
+
+WORKDIR /src
+#COPY package.json package-lock.yaml /src/
+COPY package.json /src/
+#RUN cd /src && npm install --production --frozen-lockfile --ignore-scripts
+RUN cd /src && npm install --production
+
+# Build
+FROM base AS build
+WORKDIR /src
+COPY --from=deps /src/node_modules node_modules
+COPY . .
+# RUN NODE_OPTIONS="--max-old-space-size=8192" NODE_ENV=production npm run build
+RUN NODE_ENV=production npm run build
+
+# Production
+FROM node:lts-alpine AS production
+COPY --from=build /src/.output /app
+EXPOSE 3002/tcp
+ENV HOST=0.0.0.0
+CMD [ "node", "app/.output/server/index.mjs" ]
