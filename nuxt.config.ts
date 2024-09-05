@@ -56,9 +56,9 @@ export default defineNuxtConfig({
     head: {
       viewport: 'width=device-width,initial-scale=1',
       link: [
-        { rel: 'icon', href: '/gd/favicon.ico', sizes: 'any' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/gd/gd_logo.svg' },
-        { rel: 'apple-touch-icon', href: '/gd/apple-touch-icon.png' },
+        { rel: 'icon', href: '/images/logo/favicon.ico', sizes: 'any' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/images/logo/gd_logo.svg' },
+        { rel: 'apple-touch-icon', href: '/images/logo/apple-touch-icon.png' },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

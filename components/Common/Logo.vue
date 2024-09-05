@@ -1,11 +1,10 @@
-<script setup lang="ts">
+<script setup>
 
 </script>
 
 <template>
   <div>
-    <slot />
-    <CommonFooter />
+    <img src="/images/logo/logo_gdkj.png" alt="" class="h-10">
   </div>
 </template>
 

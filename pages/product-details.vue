@@ -1,8 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'gd-layout',
+  layout: 'default',
 })
-
 </script>
 
 <template>
@@ -10,7 +9,7 @@ definePageMeta({
     <Suspense>
       <ClientOnly>
         <CommonHeader class="fixed left-0 right-0 top-0 z-[52]" />
-        <Home />
+        <ProductCenterProductDetail />
       </ClientOnly>
       <template #fallback>
         <div italic op50>
