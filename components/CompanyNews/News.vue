@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { ElImage, ElWatermark } from 'element-plus'
+import { ElImage, ElWatermark,
+  ElCarousel,
+ElCarouselItem
+} from 'element-plus'
 
 const news = ref([
   {
@@ -105,11 +108,26 @@ const news = ref([
     date: '2022年8月16日',
     year: '2022',
     title: '《2022年西门子杯》',
-    picUrl: '/images/honor/CCI08292024_0002_wm.webp',
+    picUrl: '/images/siemenscup-cimc/2022/cimc-2022_05.webp',
     picUrls: [
-      '/images/honor/CCI08292024_0002_wm.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_01.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_02.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_03.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_04.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_05.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_06.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_07.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_08.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_09.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_10.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_11.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_12.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_13.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_14.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_15.webp',
+      '/images/siemenscup-cimc/2022/cimc-2022_16.webp',
     ],
-    description: 'XXXXXXXXXXXXXXXXXXXXXXXXXXX',
+    description: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
   },
 ])
 
@@ -153,7 +171,22 @@ function showDetail(value) {
     <div class="activities">
       <div v-for="(item, index) in filterNews" :key="index" class="activity">
         <div class="act-image-wrapper">
-          <ElWatermark :font="font" content="工鼎科技">
+          <el-carousel height="300px" :autoplay="false">
+            <el-carousel-item v-for="(img, imgIdx) in item.picUrls" :key="imgIdx">
+              <ElImage
+                  style="height: 270px;width: 100%;"
+                  :src="img"
+                  :preview-teleported="true"
+                  :zoom-rate="1.2"
+                  :max-scale="7"
+                  :min-scale="0.2"
+                  :preview-src-list="item.picUrls"
+                  :initial-index="item.picUrls.findIndex(ele => img === ele)"
+                  fit="cover"
+              />
+            </el-carousel-item>
+          </el-carousel>
+          <!--<ElWatermark :font="font" content="工鼎科技">
             <ElImage
               :src="item.picUrl"
               :preview-teleported="true"
@@ -164,12 +197,12 @@ function showDetail(value) {
               :initial-index="item.picUrls.findIndex(ele => item.picUrl === ele)"
               fit="cover"
             />
-          </ElWatermark>
+          </ElWatermark>-->
         </div>
         <div class="act-content">
           <div class="meta">
             <div class="flex gap-2">
-              <div class="i-carbon-calendar-heat-map font-size-[18px]"></div>
+              <div class="i-carbon-calendar-heat-map font-size-[18px] color-[#1e80ff]"></div>
               <div>{{ item.date }}</div>
             </div>
             <p class="comments">
@@ -190,6 +223,39 @@ function showDetail(value) {
     </div>
   </section>
 </template>
+
+<style lang="scss" scoped>
+/* 走马灯 指示器样式 */
+.el-carousel {
+  /*width: 500px;*/
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
+  :deep(.el-carousel__indicators) {
+    left: unset;
+    transform: unset;
+    right: 2%;
+  }
+  :deep(.el-carousel__button) {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  :deep(.is-active .el-carousel__button) {
+    background: #1e80ff;
+  }
+
+  :deep(.el-carousel__container) {
+    height: 100%;
+  }
+}
+</style>
 
 <style scoped>
 .title1 {
@@ -334,4 +400,5 @@ function showDetail(value) {
   background-color: var(--primary-color);
   color: white;
 }
+
 </style>
