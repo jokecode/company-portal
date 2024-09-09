@@ -19,11 +19,11 @@
         </div>
       </div>
       <div class="bg-[#F0EFEF] flex-[2]">
-        <div class="rounded-1 -mt-11 m-auto mb-3.5 w-24 h-24 overflow-hidden bg-no-repeat bg-cover bg-white border-2 border-solid border-white" style="background-image: url('/images/logo/gd_logo.svg');" />
+        <div class="rounded-1 -mt-11 m-auto mb-3.5 w-24 h-24 overflow-hidden bg-no-repeat bg-cover bg-white border-2 border-solid border-white" style="background-image: url('/images/logo/gd_logo.webp');" />
         <div class="flex-row font-size-[18px] text-left pl-8 pr-8 pb-8">
           <h2 class="font-size-[28px] color-[darkgrey] text-center">联系我们</h2>
           <br>
-          <img :src="'/images/contact/wechart-qrcode.jpg'" alt="" class="w-[60%] m-auto">
+          <img src="/images/contact/wechart-qrcode.webp" alt="" class="w-[60%] m-auto">
           <br>
           <p class="pl-[40px]"><b>电话：</b>186 2823 2011</p>
           <p class="pl-[40px]"><b>邮箱：</b>peng.zhang@gdi-tech.net</p>

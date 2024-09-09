@@ -2,7 +2,7 @@ export const productData = [
 
   {
     // 图片地址
-    url: '/images/product/pn/DP-PN_01.jpg',
+    url: '/images/product/pn/DP-PN_01.webp',
     // 产品概述
     title: 'Profibus-DP转Profinet网关',
     // 产品描述
@@ -15,10 +15,10 @@ export const productData = [
     // 产品详情
     detail: {
       images: [
-        '/images/product/pn/DP-PN_01.jpg',
-        '/images/product/pn/DP-PN_02.jpg',
-        '/images/product/pn/DP-PN_03.jpg',
-        '/images/product/pn/DP-PN_04.jpg',
+        '/images/product/pn/DP-PN_01.webp',
+        '/images/product/pn/DP-PN_02.webp',
+        '/images/product/pn/DP-PN_03.webp',
+        '/images/product/pn/DP-PN_04.webp',
       ],
       desc: [
         {
@@ -68,15 +68,15 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/pn/PN-Canopen_01.jpg',
+    url: '/images/product/pn/PN-Canopen_01.webp',
     title: 'CanOpen转Profinet网关',
     desc: '本产品实现 ProfiNet 网络与 CANOpen 网络之间的数据通讯，可连接 CANOpen 网络到 ProfiNet 网络。 即将 CANOpen 设备转换为 ProfiNet 设备。',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/pn/PN-Canopen_01.jpg',
-        '/images/product/pn/PN-Canopen_02.jpg',
-        '/images/product/pn/PN-Canopen_03.jpg',
+        '/images/product/pn/PN-Canopen_01.webp',
+        '/images/product/pn/PN-Canopen_02.webp',
+        '/images/product/pn/PN-Canopen_03.webp',
       ],
       desc: [
         {
@@ -168,15 +168,15 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/pn/PN-ECAT_01.jpg',
+    url: '/images/product/pn/PN-ECAT_01.webp',
     title: 'Profinet转EtherCAT网关',
     desc: '本产品实现 PROFINET 网络与 EtherCAT 网络的互连互通。该网关可实现双向数据交换，实现EtherCAT 设备和 PROFINET 控制器的数据交互。',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/pn/PN-ECAT_01.jpg',
-        '/images/product/pn/PN-ECAT_02.jpg',
-        '/images/product/pn/PN-ECAT_03.jpg',
+        '/images/product/pn/PN-ECAT_01.webp',
+        '/images/product/pn/PN-ECAT_02.webp',
+        '/images/product/pn/PN-ECAT_03.webp',
       ],
       desc: [
         {
@@ -242,7 +242,7 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/pn/PN-EIP_01.jpg',
+    url: '/images/product/pn/PN-EIP_01.webp',
     title: 'Profinet转EtherNET IP网关',
     desc: '该产品是一款 PROFINET 从站功能的通讯网关。该产品主要功能是将 ETHERNET/IP 设备接入到 PROFINET 网络中。\n'
     + '\n'
@@ -250,9 +250,9 @@ export const productData = [
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/pn/PN-EIP_01.jpg',
-        '/images/product/pn/PN-EIP_02.jpg',
-        '/images/product/pn/PN-EIP_03.jpg',
+        '/images/product/pn/PN-EIP_01.webp',
+        '/images/product/pn/PN-EIP_02.webp',
+        '/images/product/pn/PN-EIP_03.webp',
       ],
       desc: [
         {
@@ -304,15 +304,15 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/pn/PN-Mtcp_01.jpg',
+    url: '/images/product/pn/PN-Mtcp_01.webp',
     title: 'Modbus TCP转Profinet网关',
     desc: '本产品实现 ProfiNet 网络与 Modbus（TCP）网络之间的数据通讯，可分别连接ModbusTCP网络到 ProfiNet 网络，即将 Modbus 设备转换为ProfiNet 设备。',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/pn/PN-Mtcp_01.jpg',
-        '/images/product/pn/PN-Mtcp_02.jpg',
-        '/images/product/pn/PN-Mtcp_03.jpg',
+        '/images/product/pn/PN-Mtcp_01.webp',
+        '/images/product/pn/PN-Mtcp_02.webp',
+        '/images/product/pn/PN-Mtcp_03.webp',
       ],
       desc: [
         {
@@ -333,15 +333,15 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/pn/PN-RS232_01.jpg',
+    url: '/images/product/pn/PN-RS232_01.webp',
     title: 'RS232转Profinet网关',
     desc: '本产品实现 ProfiNet 网络与 RS232 之间的数据通讯，可连接 RS-232网络到 ProfiNet 网络， 并且支持具有不同 通讯波特率和其它设置。即将 RS232设备转换为 ProfiNet 设备。',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/pn/PN-RS232_01.jpg',
-        '/images/product/pn/PN-RS232_02.jpg',
-        '/images/product/pn/PN-RS232_03.jpg',
+        '/images/product/pn/PN-RS232_01.webp',
+        '/images/product/pn/PN-RS232_02.webp',
+        '/images/product/pn/PN-RS232_03.webp',
       ],
       desc: [
         {
@@ -401,16 +401,16 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/pn/PN-RTU_01.jpg',
+    url: '/images/product/pn/PN-RTU_01.webp',
     title: 'Modbus RTU转Profinet网关',
     desc: '本产品实现 ProfiNet 网络与Modbus（RS-485）网络之间的数据通讯，可连接 RS-485 网络到 ProfiNet 网络，并且支持具有不同Modbus 通讯波特率和其它设置。即将 Modbus设备转换为 ProfiNet 设备。',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/pn/PN-RTU_01.jpg',
-        '/images/product/pn/PN-RTU_02.jpg',
-        '/images/product/pn/PN-RTU_03.jpg',
-        '/images/product/pn/PN-RTU_04.jpg',
+        '/images/product/pn/PN-RTU_01.webp',
+        '/images/product/pn/PN-RTU_02.webp',
+        '/images/product/pn/PN-RTU_03.webp',
+        '/images/product/pn/PN-RTU_04.webp',
       ],
       desc: [
         {
@@ -460,13 +460,13 @@ export const productData = [
   /*  PROFINET芯片/软件 */
   /********************/
   {
-    url: '/images/case/case1.jpg',
+    url: '/images/case/case1.webp',
     title: '基于西门子芯片与软件的PN解决方案',
     desc: '标准西门子PN解决方案代理\n支持RT/IRT，ProfiDrive/ProfiSafe等多种行规\n主从站开发，交钥匙工程，OEM生产\n标准产品和定制产品',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/case/case1.jpg',
+        '/images/case/case1.webp',
       ],
       desc: [
         {
@@ -485,13 +485,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/case/case2.jpg',
+    url: '/images/case/case2.webp',
     title: '各行业定制',
     desc: '提供交钥匙工程\nODM到OEM的一条龙服务\n从研发、生产、品管到售后技术支持\n前西门子FA研发技术主管带队，提供西门子产品品质',
     type: 'CustomizedProduct',
     detail: {
       images: [
-        '/images/case/case2.jpg',
+        '/images/case/case2.webp',
       ],
       desc: [
         {
@@ -514,15 +514,15 @@ export const productData = [
   /* PLC */
   /*******/
   {
-    url: '/images/product/plc/PLC01_02.jpg',
+    url: '/images/product/plc/PLC01_02.webp',
     title: 'PLC',
     desc: 'XXXXXXXXX',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/plc/PLC01_01.jpg',
-        '/images/product/plc/PLC01_02.jpg',
-        '/images/product/plc/PLC01_03.jpg',
+        '/images/product/plc/PLC01_01.webp',
+        '/images/product/plc/PLC01_02.webp',
+        '/images/product/plc/PLC01_03.webp',
       ],
       desc: [
         {
@@ -545,17 +545,17 @@ export const productData = [
   /* 分布式 IO */
   /************/
   {
-    url: '/images/product/distributed-io/AI4_01.jpg',
+    url: '/images/product/distributed-io/AI4_01.webp',
     title: '分布式IO-AI4',
     desc: 'XXXXXXXXX',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/distributed-io/AI4_01.jpg',
-        '/images/product/distributed-io/AI4_02.jpg',
-        '/images/product/distributed-io/AI4_03.jpg',
-        '/images/product/distributed-io/AI4_04.jpg',
-        '/images/product/distributed-io/AI4_05.jpg',
+        '/images/product/distributed-io/AI4_01.webp',
+        '/images/product/distributed-io/AI4_02.webp',
+        '/images/product/distributed-io/AI4_03.webp',
+        '/images/product/distributed-io/AI4_04.webp',
+        '/images/product/distributed-io/AI4_05.webp',
       ],
       desc: [
         {
@@ -574,17 +574,17 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/distributed-io/AQ4_01.jpg',
+    url: '/images/product/distributed-io/AQ4_01.webp',
     title: '分布式IO-AQ4',
     desc: 'XXXXXXXXX',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/distributed-io/AQ4_01.jpg',
-        '/images/product/distributed-io/AQ4_02.jpg',
-        '/images/product/distributed-io/AQ4_03.jpg',
-        '/images/product/distributed-io/AQ4_04.jpg',
-        '/images/product/distributed-io/AQ4_05.jpg',
+        '/images/product/distributed-io/AQ4_01.webp',
+        '/images/product/distributed-io/AQ4_02.webp',
+        '/images/product/distributed-io/AQ4_03.webp',
+        '/images/product/distributed-io/AQ4_04.webp',
+        '/images/product/distributed-io/AQ4_05.webp',
       ],
       desc: [
         {
@@ -603,17 +603,17 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/distributed-io/DI16_01.jpg',
+    url: '/images/product/distributed-io/DI16_01.webp',
     title: '分布式IO-DI16',
     desc: 'XXXXXXXXX',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/distributed-io/DI16_01.jpg',
-        '/images/product/distributed-io/DI16_02.jpg',
-        '/images/product/distributed-io/DI16_03.jpg',
-        '/images/product/distributed-io/DI16_04.jpg',
-        '/images/product/distributed-io/DI16_05.jpg',
+        '/images/product/distributed-io/DI16_01.webp',
+        '/images/product/distributed-io/DI16_02.webp',
+        '/images/product/distributed-io/DI16_03.webp',
+        '/images/product/distributed-io/DI16_04.webp',
+        '/images/product/distributed-io/DI16_05.webp',
       ],
       desc: [
         {
@@ -632,17 +632,17 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/distributed-io/DQ8_01.jpg',
+    url: '/images/product/distributed-io/DQ8_01.webp',
     title: '分布式IO-DQ8',
     desc: 'XXXXXXXXX',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/distributed-io/DQ8_01.jpg',
-        '/images/product/distributed-io/DQ8_02.jpg',
-        '/images/product/distributed-io/DQ8_03.jpg',
-        '/images/product/distributed-io/DQ8_04.jpg',
-        '/images/product/distributed-io/DQ8_05.jpg',
+        '/images/product/distributed-io/DQ8_01.webp',
+        '/images/product/distributed-io/DQ8_02.webp',
+        '/images/product/distributed-io/DQ8_03.webp',
+        '/images/product/distributed-io/DQ8_04.webp',
+        '/images/product/distributed-io/DQ8_05.webp',
       ],
       desc: [
         {
@@ -661,15 +661,15 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/distributed-io/EtherCAT_02.jpg',
+    url: '/images/product/distributed-io/EtherCAT_02.webp',
     title: '分布式IO-EtherCAT',
     desc: 'XXXXXXXXX',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/distributed-io/EtherCAT_01.jpg',
-        '/images/product/distributed-io/EtherCAT_02.jpg',
-        '/images/product/distributed-io/EtherCAT_03.jpg',
+        '/images/product/distributed-io/EtherCAT_01.webp',
+        '/images/product/distributed-io/EtherCAT_02.webp',
+        '/images/product/distributed-io/EtherCAT_03.webp',
       ],
       desc: [
         {
@@ -688,14 +688,14 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/distributed-io/壳_01.jpg',
+    url: '/images/product/distributed-io/壳_01.webp',
     title: '分布式IO-壳',
     desc: 'XXXXXXXXX',
     type: 'StandardizedProduct',
     detail: {
       images: [
-        '/images/product/distributed-io/壳_01.jpg',
-        '/images/product/distributed-io/壳_02.jpg',
+        '/images/product/distributed-io/壳_01.webp',
+        '/images/product/distributed-io/壳_02.webp',
       ],
       desc: [
         {
@@ -718,13 +718,13 @@ export const productData = [
   /*   西门子  */
   /************/
   {
-    url: '/images/product/siemens/CP1604.png',
+    url: '/images/product/siemens/CP1604.webp',
     title: 'CP1604 Profinet主站板卡',
     desc: '基于PCI/PCIe接口的Profinet主站板卡，支持完全的用户编程与自定义。全程C语言开发，可在博图内进行网络组态',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/CP1604.png',
+        '/images/product/siemens/CP1604.webp',
       ],
       desc: [
         {
@@ -746,13 +746,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/CP1616.png',
+    url: '/images/product/siemens/CP1616.webp',
     title: 'CP1616 Profinet主站板卡',
     desc: '基于PCI/PCIe接口的Profinet主站板卡，支持完全的用户编程与自定义。全程C语言开发，可在博图内进行网络组态',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/CP1616.png',
+        '/images/product/siemens/CP1616.webp',
       ],
       desc: [
         {
@@ -774,13 +774,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/CP1625.png',
+    url: '/images/product/siemens/CP1625.webp',
     title: 'CP1625 Profinet主站板卡\n',
     desc: '高性价比的基于PCIe接口的Profinet主站板卡，支持完全的用户编程与自定义。全程C语言开发，可在博图内进行网络组态或者使用提供的工具进行自定义网络组态',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/CP1625.png',
+        '/images/product/siemens/CP1625.webp',
       ],
       desc: [
         {
@@ -802,13 +802,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/CP1626.png',
+    url: '/images/product/siemens/CP1626.webp',
     title: 'CP1626 Profinet主站板卡',
     desc: '基于PCI/PCIe接口的Profinet主站板卡，支持完全的用户编程与自定义。全程C语言开发，可在博图内进行网络组态',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/CP1626.png',
+        '/images/product/siemens/CP1626.webp',
       ],
       desc: [
         {
@@ -830,13 +830,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/DKSW.png',
+    url: '/images/product/siemens/DKSW.webp',
     title: 'Profinet从站软件协议栈',
     desc: '一次性投入，无限数量的使用授权。来自西门子官方的PN从站软件授权，提供全套源代码与移植参考。可自由选择硬件平台进行移植，国内已有大量成功案例',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/DKSW.png',
+        '/images/product/siemens/DKSW.webp',
       ],
       desc: [
         {
@@ -859,13 +859,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/ERTEC200P.png',
+    url: '/images/product/siemens/ERTEC200P.webp',
     title: 'ERTEC200P芯片',
     desc: '西门子PN从站芯片。国内外部署已超过500万站点。大量客户长期使用证明的高可靠性与强悍性能。易于开发，提供全套软硬件开发资料。有客户在50天内完成产品开发',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/ERTEC200P.png',
+        '/images/product/siemens/ERTEC200P.webp',
       ],
       desc: [
         {
@@ -887,7 +887,7 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/ERTEC200P-3-Devkit.png',
+    url: '/images/product/siemens/ERTEC200P-3-Devkit.webp',
     title: 'ERTEC200P-3 Mini开发板',
     desc: '基于ERTEC200P-3芯片的Mini开发板\n'
     + '低成本硬件方案\n'
@@ -896,7 +896,7 @@ export const productData = [
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/ERTEC200P-3-Devkit.png',
+        '/images/product/siemens/ERTEC200P-3-Devkit.webp',
       ],
       desc: [
         {
@@ -923,13 +923,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/ERTEC200P-Devkit.png',
+    url: '/images/product/siemens/ERTEC200P-Devkit.webp',
     title: 'ERTEC200P开发套件',
     desc: '西门子PN硬从站开发套件。提供全部硬件原理图与参考布板图。硬件提供TAP抓包功能，便于进行通信分析。提供一致性预测试软件。提供优化的软硬件参考设计与样例代码。',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/ERTEC200P-Devkit.png',
+        '/images/product/siemens/ERTEC200P-Devkit.webp',
       ],
       desc: [
         {
@@ -952,13 +952,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/ERTEC200P-Minicard.png',
+    url: '/images/product/siemens/ERTEC200P-Minicard.webp',
     title: '',
     desc: '',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/ERTEC200P-Minicard.png',
+        '/images/product/siemens/ERTEC200P-Minicard.webp',
       ],
       desc: [
         {
@@ -977,13 +977,13 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/PNDriver.png',
+    url: '/images/product/siemens/PNDriver.webp',
     title: 'PN Driver Profinet主站协议栈\n',
     desc: '用于标准以太网接口的PROFINET控制器',
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/PNDriver.png',
+        '/images/product/siemens/PNDriver.webp',
       ],
       desc: [
         {
@@ -1014,7 +1014,7 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/ProfiSafe.png',
+    url: '/images/product/siemens/ProfiSafe.webp',
     title: 'PROFIsafe 入门开发包，软件电子交付',
     desc: 'PROFIsafe 认证的PROFIsafe 驱动软件(PSD) \n'
     + '\n'
@@ -1024,7 +1024,7 @@ export const productData = [
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/ProfiSafe.png',
+        '/images/product/siemens/ProfiSafe.webp',
       ],
       desc: [
         {
@@ -1051,7 +1051,7 @@ export const productData = [
     },
   },
   {
-    url: '/images/product/siemens/SOC1.png',
+    url: '/images/product/siemens/SOC1.webp',
     title: 'PROFINET IRT 控制器开发套件',
     desc: '◆\t基于SOC1的嵌入式PN控制器解决方案\n'
     + '◆\t开发套件可提供给第三方控制器供应商用于在其控制器中实现PROFINET RT/IRT 功能\n'
@@ -1063,7 +1063,7 @@ export const productData = [
     type: 'AgencyProduct',
     detail: {
       images: [
-        '/images/product/siemens/SOC1.png',
+        '/images/product/siemens/SOC1.webp',
       ],
       desc: [
         {
@@ -1094,15 +1094,15 @@ export const productData = [
   /*   东方发电器  */
   /***************/
   {
-    url: '/images/product/dec/DEC_01.jpg',
+    url: '/images/product/dec/DEC_01.webp',
     title: '东方电气XXX板子',
     desc: 'XXXXXXXXX',
     type: 'Profinet',
     detail: {
       images: [
-        '/images/product/dec/DEC_01.jpg',
-        '/images/product/dec/DEC_02.jpg',
-        '/images/product/dec/DEC_03.jpg',
+        '/images/product/dec/DEC_01.webp',
+        '/images/product/dec/DEC_02.webp',
+        '/images/product/dec/DEC_03.webp',
       ],
       desc: [
         {
@@ -1122,13 +1122,13 @@ export const productData = [
   },
 
   // {
-  //   url: '/images/product/pn/_01.jpg',
+  //   url: '/images/product/pn/_01.webp',
   //   title: '',
   //   desc: '',
   //   type: 'Profinet',
   //   detail: {
   //     images: [
-  //       '/images/product/pn/_01.jpg',
+  //       '/images/product/pn/_01.webp',
   //     ],
   //     desc: [
   //       {
@@ -1148,13 +1148,13 @@ export const productData = [
   // },
 
   // {
-  //   url: '/images/product/pn/_01.jpg',
+  //   url: '/images/product/pn/_01.webp',
   //   title: '',
   //   desc: '',
   //   type: 'Profinet',
   //   detail: {
   //     images: [
-  //       '/images/product/pn/_01.jpg',
+  //       '/images/product/pn/_01.webp',
   //     ],
   //     desc: [
   //       {
@@ -1174,13 +1174,13 @@ export const productData = [
   // },
 
   // {
-  //   url: '/images/product/pn/_01.jpg',
+  //   url: '/images/product/pn/_01.webp',
   //   title: '',
   //   desc: '',
   //   type: 'Profinet',
   //   detail: {
   //     images: [
-  //       '/images/product/pn/_01.jpg',
+  //       '/images/product/pn/_01.webp',
   //     ],
   //     desc: [
   //       {
@@ -1200,13 +1200,13 @@ export const productData = [
   // },
 
   // {
-  //   url: '/images/product/pn/_01.jpg',
+  //   url: '/images/product/pn/_01.webp',
   //   title: '',
   //   desc: '',
   //   type: 'Profinet',
   //   detail: {
   //     images: [
-  //       '/images/product/pn/_01.jpg',
+  //       '/images/product/pn/_01.webp',
   //     ],
   //     desc: [
   //       {

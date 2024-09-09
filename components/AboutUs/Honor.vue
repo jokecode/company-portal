@@ -3,22 +3,22 @@ import { ElImage } from 'element-plus'
 
 const images = ref([
   {
-    src: '/images/honor/HighTechnologyEnterprises.png',
+    src: '/images/honor/HighTechnologyEnterprises.webp',
     style: {
       'grid-column-start': 1,
       'grid-column-end': 3,
     },
   },
   {
-    src: '/images/honor/CCI08292024_0002_wm.jpg',
+    src: '/images/honor/CCI08292024_0002_wm.webp',
     style: {},
   },
   {
-    src: '/images/honor/20240829171247.jpg',
+    src: '/images/honor/20240829171247.webp',
     style: {},
   },
   {
-    src: '/images/honor/CCI08292024_0003_wm.jpg',
+    src: '/images/honor/CCI08292024_0003_wm.webp',
     style: {},
   },
 ])
@@ -32,7 +32,7 @@ const images = ref([
           资质荣誉
         </h2>
         <div class="grid-images">
-          <el-image
+          <ElImage
             v-for="(item, index) in images"
             :key="index"
             class="img"

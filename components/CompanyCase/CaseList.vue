@@ -1,42 +1,42 @@
 <script setup lang="ts">
 const images = ref([
   {
-    url: '/images/case/case1.jpg',
+    url: '/images/case/case1.webp',
     title: '基于西门子芯片与软件的PN解决方案',
     desc: '标准西门子PN解决方案代理\n支持RT/IRT，ProfiDrive/ProfiSafe等多种行规\n主从站开发，交钥匙工程，OEM生产\n标准产品和定制产品',
   },
   {
-    url: '/images/case/case2.jpg',
+    url: '/images/case/case2.webp',
     title: '各行业定制',
     desc: '提供交钥匙工程\nODM到OEM的一条龙服务\n从研发、生产、品管到售后技术支持\n前西门子FA研发技术主管带队，提供西门子产品品质',
   },
   {
-    url: '/images/case/case3.jpg',
+    url: '/images/case/case3.webp',
     title: 'PN定制产品在电力行业的应用',
     desc: '支持IRT等实时通信\n满足最苛刻的高端客户需求\n提供ET200SP HF的功能\n不受货期、价格波动影响',
   },
   {
-    url: '/images/case/case4.jpg',
+    url: '/images/case/case4.webp',
     title: 'PN定制产品在半导体行业的应用',
     desc: '',
   },
   {
-    url: '/images/case/case5.jpg',
+    url: '/images/case/case5.webp',
     title: 'PN定制化产品在汽车行业应用',
     desc: '',
   },
   {
-    url: '/images/case/case6.jpg',
+    url: '/images/case/case6.webp',
     title: '进口替代，大幅度提高利润率深度绑定客户',
     desc: '',
   },
   {
-    url: '/images/case/edge1.jpg',
+    url: '/images/case/edge1.webp',
     title: '边缘解决方案-温箱集中监控',
     desc: '',
   },
   {
-    url: '/images/case/edge2.jpg',
+    url: '/images/case/edge2.webp',
     title: '边缘解决方案-电表监控',
     desc: '',
   },
@@ -81,7 +81,8 @@ const images = ref([
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;">
+            -webkit-box-orient: vertical;"
+          >
             {{ item.desc }}
           </article>
         </div>
@@ -159,7 +160,7 @@ section {
 }
 
 .activity {
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
   padding: 24px;
   transition: 0.4s;
   margin-bottom: 56px;
@@ -214,6 +215,6 @@ section {
 
 .activity:hover {
   transform: translateY(-20px) scale(1.05);
-  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.1);
 }
 </style>

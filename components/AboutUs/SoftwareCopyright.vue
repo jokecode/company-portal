@@ -3,46 +3,46 @@ import { ElImage } from 'element-plus'
 
 const images = ref([
   {
-    url: '/images/software-copyright-wm/2024-09-03_1639.png',
+    url: '/images/software-copyright-wm/2024-09-03_1639.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0003.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0003.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0004.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0004.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0005.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0005.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0006.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0006.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0007.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0007.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0008.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0008.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0009.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0009.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0010.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0010.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0011.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0011.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0012.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0012.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0013.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0013.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0014.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0014.webp',
   },
   {
-    url: '/images/software-copyright-wm/CCI20190823_0015.jpg',
+    url: '/images/software-copyright-wm/CCI20190823_0015.webp',
   },
 ])
 </script>
@@ -56,7 +56,7 @@ const images = ref([
         </h2>
         <div class="grid-imgs">
           <!-- <img v-for="(item, index) in images" :key="index" :src="item.url" class="img" alt=""> -->
-          <el-image
+          <ElImage
             v-for="(item, index) in images"
             :key="index"
             class="img"

@@ -26,9 +26,11 @@ export default defineNuxtConfig({
     '@glidejs/glide/dist/css/glide.core.min.css',
     'element-plus/dist/index.css',
   ],
+
   build: {
     transpile: ['element-plus/es'],
   },
+
   vite: {
     plugins: [
       ElementPlus(),
@@ -57,8 +59,8 @@ export default defineNuxtConfig({
       viewport: 'width=device-width,initial-scale=1',
       link: [
         { rel: 'icon', href: '/images/logo/favicon.ico', sizes: 'any' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/images/logo/gd_logo.svg' },
-        { rel: 'apple-touch-icon', href: '/images/logo/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/images/logo/gd_logo.webp' },
+        { rel: 'apple-touch-icon', href: '/images/logo/apple-touch-icon.webp' },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -86,4 +88,6 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
+
+  compatibilityDate: '2024-09-06',
 })
