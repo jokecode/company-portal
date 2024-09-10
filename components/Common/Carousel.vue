@@ -49,7 +49,7 @@ onMounted(() => {
             <!-- <button class="explore-btn">探索更多</button> -->
           </div>
           <div class="backdrop" />
-          <img src="/images/glide-slide/people-in-couch-1024248.jpg" alt="">
+          <img src="/images/glide-slide/people-in-couch-1024248.webp" alt="">
         </div>
         <div class="glide__slide" style="height: 500px;">
           <div class="slide-caption left" :class="queryClassName">
