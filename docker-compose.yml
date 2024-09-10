@@ -13,7 +13,7 @@ services:
       dockerfile: Dockerfile
     container_name: gdi_web
     # 生产环境/[生产环境/开发环境]需要指定编译后的版本 - 放开下方注释
-    image: gdi_web:0.0.6
+    image: gdi_web:0.0.8
     restart: unless-stopped
     environment:
       TZ: Asia/Shanghai # 指定时区

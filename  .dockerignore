@@ -1,4 +1,6 @@
 node_modules
-dist
 .nuxt
 .idea/
+.vscode/
+.github/
+#pnpm-lock.yaml
