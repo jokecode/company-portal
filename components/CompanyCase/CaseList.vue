@@ -91,17 +91,6 @@ const images = ref([
   </div>
 </template>
 
-<style>
-:root {
-  --text-color-light-gray: #c6c6c6;
-  --text-color-dark: #494949;
-  --text-color-gray: #8b8b8b;
-  --primary-color: #ff434f;
-  --text-color-darker: #2e2e2e;
-  --text-color-dark-gray: #727272;
-}
-</style>
-
 <style scoped>
 section {
   /* 二维 */

@@ -146,8 +146,10 @@ function showDetail(value) {
 </script>
 
 <template>
-  <section id="company-activities" class="company-activities">
-    <h2 class="title1">公司动态</h2>
+  <section class="company-activities">
+    <h2 class="title1">
+      公司动态
+    </h2>
     <section id="showcases" class="showcases section-bg">
       <div class="filter-btns">
         <button class="filter-btn" :class="filterCriteria === 'All' ? 'active' : ''" @click="showDetail('All')">
@@ -168,7 +170,7 @@ function showDetail(value) {
     <div class="activities">
       <div v-for="(item, index) in filterNews" :key="index" class="activity">
         <div class="act-image-wrapper">
-          <ElCarousel height="300px" :autoplay="false">
+          <ElCarousel height="300px" :autoplay="true">
             <ElCarouselItem v-for="(img, imgIdx) in item.picUrls" :key="imgIdx">
               <ElImage
                 style="height: 270px;width: 100%;"
@@ -199,7 +201,7 @@ function showDetail(value) {
         <div class="act-content">
           <div class="meta">
             <div class="flex gap-2">
-              <div class="i-carbon-calendar-heat-map font-size-[18px] color-[#1e80ff]"></div>
+              <div class="i-carbon-calendar-heat-map font-size-[18px] color-[#1e80ff]" />
               <div>{{ item.date }}</div>
             </div>
             <p class="comments">
@@ -208,12 +210,16 @@ function showDetail(value) {
               <span>条评论</span> -->
             </p>
           </div>
-          <h2 class="act-title">{{ item.title }}</h2>
+          <h2 class="act-title">
+            {{ item.title }}
+          </h2>
           <article>
             {{ item.description }}
           </article>
           <div style="text-align: right;width: 100%;">
-            <button class="read-more-btn">阅读更多</button>
+            <button class="read-more-btn">
+              阅读更多
+            </button>
           </div>
         </div>
       </div>
@@ -293,6 +299,7 @@ function showDetail(value) {
   grid-template-columns: repeat(1, 1fr);
   column-gap: 24px;
   gap: 30px;
+  width: 1200px;
 }
 
 .activity {

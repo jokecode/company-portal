@@ -36,7 +36,9 @@ function setCurrentProduct(info) {
 <template>
   <div style="width: 70vw;margin: 0 auto;">
     <section class="company-activities">
-      <h2 class="title1">产品中心</h2>
+      <h2 class="title1">
+        产品中心
+      </h2>
       <section id="showcases" class="showcases section-bg">
         <div class="filter-btns">
           <button class="filter-btn" :class="filterCriteria === 'All' ? 'active' : ''" @click="showDetail('All')">
@@ -97,18 +99,6 @@ function setCurrentProduct(info) {
   </div>
 </template>
 
-<style>
-:root {
-  --text-color-light-gray: #c6c6c6;
-  --text-color-dark: #494949;
-  --text-color-gray: #8b8b8b;
-  --primary-color: #ff434f;
-  --text-color-darker: #2e2e2e;
-  --text-color-dark-gray: #727272;
-  --secondary-color: #e3e3e3;
-}
-</style>
-
 <style lang="scss" scoped>
 section {
   /* 二维 */
@@ -167,7 +157,7 @@ section {
 }
 
 .activity {
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
   padding: 24px;
   transition: 0.4s;
   margin-bottom: 56px;
@@ -223,7 +213,7 @@ section {
 
 .activity:hover {
   transform: translateY(-20px) scale(1.05);
-  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.1);
 }
 
 .filter-btns {

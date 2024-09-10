@@ -49,7 +49,7 @@ onMounted(() => {
             <!-- <button class="explore-btn">探索更多</button> -->
           </div>
           <div class="backdrop" />
-          <img src="/images/glide-slide/people-in-couch-1024248.jpg">
+          <img src="/images/glide-slide/people-in-couch-1024248.jpg" alt="">
         </div>
         <div class="glide__slide" style="height: 500px;">
           <div class="slide-caption left" :class="queryClassName">
@@ -77,21 +77,6 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
-<style>
-:root {
-  /*--primary-color: #ff434f;*/
-  --primary-color: #1b80e3;
-  --text-color-lightest: #e7e9ec;
-  --backdrop-color: rgba(42, 42, 42, 0.7);
-  /*--secondary-color: #e3e3e3;
-  --text-color-darker: #2e2e2e;
-  --text-color-dark: #494949;
-  --text-color-gray: #8b8b8b;
-  --text-color-dark-gray: #727272;
-  --text-color-light-gray: #c6c6c6;*/
-}
-</style>
 
 <style scoped>
 /* 轮播图 */
@@ -130,7 +115,7 @@ onMounted(() => {
 
 .slide-caption h3 {
   font-size: 24px;
-  margin: 48px 0px;
+  margin: 48px 0;
 }
 
 .slide-caption.left {
