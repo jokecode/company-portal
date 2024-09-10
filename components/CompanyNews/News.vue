@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { ElImage, ElWatermark,
-  ElCarousel,
-ElCarouselItem
-} from 'element-plus'
+import { ElCarousel, ElCarouselItem, ElImage } from 'element-plus'
 
 const news = ref([
   {
@@ -133,9 +130,9 @@ const news = ref([
 
 const filterCriteria = ref('All')
 
-const font = reactive({
-  color: 'rgba(0, 0, 0, .15)',
-})
+// const font = reactive({
+//   color: 'rgba(0, 0, 0, .15)',
+// })
 
 const filterNews = computed(() => {
   return news.value.filter((item) => {
@@ -149,8 +146,10 @@ function showDetail(value) {
 </script>
 
 <template>
-  <section id="company-activities" class="company-activities">
-    <h2 class="title1">公司动态</h2>
+  <section class="company-activities">
+    <h2 class="title1">
+      公司动态
+    </h2>
     <section id="showcases" class="showcases section-bg">
       <div class="filter-btns">
         <button class="filter-btn" :class="filterCriteria === 'All' ? 'active' : ''" @click="showDetail('All')">
@@ -171,22 +170,22 @@ function showDetail(value) {
     <div class="activities">
       <div v-for="(item, index) in filterNews" :key="index" class="activity">
         <div class="act-image-wrapper">
-          <el-carousel height="300px" :autoplay="false">
-            <el-carousel-item v-for="(img, imgIdx) in item.picUrls" :key="imgIdx">
+          <ElCarousel height="300px" :autoplay="true">
+            <ElCarouselItem v-for="(img, imgIdx) in item.picUrls" :key="imgIdx">
               <ElImage
-                  style="height: 270px;width: 100%;"
-                  :src="img"
-                  :preview-teleported="true"
-                  :zoom-rate="1.2"
-                  :max-scale="7"
-                  :min-scale="0.2"
-                  :preview-src-list="item.picUrls"
-                  :initial-index="item.picUrls.findIndex(ele => img === ele)"
-                  fit="cover"
+                style="height: 270px;width: 100%;"
+                :src="img"
+                :preview-teleported="true"
+                :zoom-rate="1.2"
+                :max-scale="7"
+                :min-scale="0.2"
+                :preview-src-list="item.picUrls"
+                :initial-index="item.picUrls.findIndex(ele => img === ele)"
+                fit="cover"
               />
-            </el-carousel-item>
-          </el-carousel>
-          <!--<ElWatermark :font="font" content="工鼎科技">
+            </ElCarouselItem>
+          </ElCarousel>
+          <!-- <ElWatermark :font="font" content="工鼎科技">
             <ElImage
               :src="item.picUrl"
               :preview-teleported="true"
@@ -197,12 +196,12 @@ function showDetail(value) {
               :initial-index="item.picUrls.findIndex(ele => item.picUrl === ele)"
               fit="cover"
             />
-          </ElWatermark>-->
+          </ElWatermark> -->
         </div>
         <div class="act-content">
           <div class="meta">
             <div class="flex gap-2">
-              <div class="i-carbon-calendar-heat-map font-size-[18px] color-[#1e80ff]"></div>
+              <div class="i-carbon-calendar-heat-map font-size-[18px] color-[#1e80ff]" />
               <div>{{ item.date }}</div>
             </div>
             <p class="comments">
@@ -211,12 +210,16 @@ function showDetail(value) {
               <span>条评论</span> -->
             </p>
           </div>
-          <h2 class="act-title">{{ item.title }}</h2>
+          <h2 class="act-title">
+            {{ item.title }}
+          </h2>
           <article>
             {{ item.description }}
           </article>
           <div style="text-align: right;width: 100%;">
-            <button class="read-more-btn">阅读更多</button>
+            <button class="read-more-btn">
+              阅读更多
+            </button>
           </div>
         </div>
       </div>
@@ -231,7 +234,7 @@ function showDetail(value) {
   .el-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
   }
-  .el-carousel__item:nth-child(2n+1) {
+  .el-carousel__item:nth-child(2n + 1) {
     background-color: #d3dce6;
   }
   :deep(.el-carousel__indicators) {
@@ -296,6 +299,7 @@ function showDetail(value) {
   grid-template-columns: repeat(1, 1fr);
   column-gap: 24px;
   gap: 30px;
+  width: 1200px;
 }
 
 .activity {
@@ -395,10 +399,9 @@ function showDetail(value) {
   outline: none;
 }
 
-.filter-btn.active,
+.filter-btn:active,
 .filter-btn:hover {
   background-color: var(--primary-color);
   color: white;
 }
-
 </style>
