@@ -14,11 +14,11 @@ const images = ref([
     style: {},
   },
   {
-    src: '/images/honor/20240829171247.webp',
+    src: '/images/honor/CCI08292024_0003_wm.webp',
     style: {},
   },
   {
-    src: '/images/honor/CCI08292024_0003_wm.webp',
+    src: '/images/honor/20240829171247.webp',
     style: {},
   },
 ])

@@ -1,5 +1,18 @@
 <script setup lang="ts">
+import { useNewsStore } from '~/composables/news'
 
+const news = useNewsStore()
+
+const filterNews = computed(() => {
+  return news.newsList.filter((item, index) => {
+    return index <= 2
+  })
+})
+
+function goUrl(url) {
+  const router = useRouter()
+  router.push(url)
+}
 </script>
 
 <template>
@@ -10,12 +23,25 @@
       <div class="section__header">
         <h4>最新消息</h4>
         <div class="section__header-element">
-          <a class="link" href="news.html">查看所有消息</a>
+          <a class="link" @click="goUrl('/company-dynamics')">查看所有消息</a>
         </div>
       </div>
       <div class="row">
-        <div class="col fadeInRightSmall">
+        <div v-for="(item, index) in filterNews" :key="index" class="col fadeInRightSmall">
           <!-- Post minimal -->
+          <article class="post-minimal">
+            <time class="post-minimal__time">{{ item.date }}</time>
+            <div class="post-minimal__divider"></div>
+            <h6 class="post-minimal__title">
+              <a @click="goUrl('/company-dynamics')">{{ item.title }}</a>
+            </h6>
+            <p class="news-content">{{ item.description }}</p>
+            <a class="button" @click="goUrl('/company-dynamics')">更多动态</a>
+          </article>
+        </div>
+
+        <!-- <div class="col fadeInRightSmall">
+          &lt;!&ndash; Post minimal &ndash;&gt;
           <article class="post-minimal">
             <time class="post-minimal__time" datetime="2022">2022年4月13日</time>
             <div class="post-minimal__divider"></div>
@@ -27,7 +53,7 @@
           </article>
         </div>
         <div class="col fadeInRightSmall" data-wow-delay=".1s">
-          <!-- Post minimal -->
+          &lt;!&ndash; Post minimal &ndash;&gt;
           <article class="post-minimal">
             <time class="post-minimal__time" datetime="2022">2022年3月25日</time>
             <div class="post-minimal__divider"></div>
@@ -39,7 +65,7 @@
           </article>
         </div>
         <div class="col fadeInRightSmall" data-wow-delay=".2s">
-          <!-- Post minimal -->
+          &lt;!&ndash; Post minimal &ndash;&gt;
           <article class="post-minimal">
             <time class="post-minimal__time" datetime="2022">2022年2月1日</time>
             <div class="post-minimal__divider"></div>
@@ -49,7 +75,7 @@
             <p>安装通常是建筑物中几乎看不见的部分。数英里的...</p>
             <a class="button" href="single-post.html">read more</a>
           </article>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -109,8 +135,18 @@
   margin-bottom: -50px;
   margin-top: 40px;
 }
+.col {
+  flex-basis: 30%;
+  height: 222px;
+}
 .post-minimal {
   text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: space-between;
 }
 .post-minimal__time {
   font-size: 14px;
@@ -128,6 +164,15 @@
   margin-bottom: 0;
   font-weight: 500;
   margin-top: 30px;
+
+  height: 48px;
+
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .post-minimal__title > a {
   line-height: 1.375;
@@ -176,5 +221,14 @@
   border-color: #f5a63f;
   background-color: #f5a63f;
   transition: 0.3s;
+}
+
+.news-content {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 </style>
