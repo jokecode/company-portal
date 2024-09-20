@@ -7,9 +7,8 @@ definePageMeta({
 <template>
   <div style="display: flex; flex-direction: column;">
     <Suspense>
-      <ClientOnly>
-        <CompanyNews />
-      </ClientOnly>
+      <!-- 公司动态、新闻 -->
+      <CompanyNews />
       <template #fallback>
         <div italic op50>
           <span animate-pulse>Loading...</span>

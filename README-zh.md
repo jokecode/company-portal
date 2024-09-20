@@ -70,6 +70,22 @@ pnpm generate
 └─server
     └─api
 ```
+### robots.txt文件说明
+> ` robots.txt `文件是用来指示搜索引擎的爬虫哪些页面可以爬取，哪些页面不能爬取的。
+
+#### 文件路径：
+`public/robots.txt`
+
+
+#### 关键指令解释：
+
+`User-agent`: 指定搜索引擎爬虫（如 Googlebot、Bingbot 等），` * `代表所有爬虫。
+
+`Disallow`: 禁止访问的路径，` / `代表根目录，后面跟随的路径表示要禁止爬取的目录或文件。
+
+`Allow`: 明确允许访问的路径（仅用于与 ` Disallow ` 搭配）。
+
+`Sitemap`: 提供站点地图的 ` URL `。
 
 
 ### Nuxt 模块

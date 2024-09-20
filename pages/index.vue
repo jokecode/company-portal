@@ -6,19 +6,17 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="display: flex; flex-direction: column;">
-    <Suspense>
-      <ClientOnly>
-        <CommonHeader class="fixed left-0 right-0 top-0 z-[52]" />
-        <Home />
-      </ClientOnly>
-      <template #fallback>
-        <div italic op50>
-          <span animate-pulse>Loading...</span>
-        </div>
-      </template>
-    </Suspense>
-  </div>
+  <Suspense>
+    <div style="display: flex; flex-direction: column;">
+      <!-- 首页 -->
+      <Home />
+    </div>
+    <template #fallback>
+      <div italic op50>
+        <span animate-pulse>Loading...</span>
+      </div>
+    </template>
+  </Suspense>
 </template>
 
 <style scoped>
